@@ -1,6 +1,6 @@
 fileVersion: 1
 id: 6790ca90-8b95-4c61-8a35-f51d0a2bf408
-name: FCTLESS_CUSTOMER
+name: FCTLESS_CUSTOMER01
 operation:
   config:
     groupByAll: false
@@ -296,7 +296,7 @@ operation:
             nodeName: DIM_CUSTOMER
         join:
           joinCondition: FROM {{ ref('WORK', 'DIM_CUSTOMER') }} "DIM_CUSTOMER"
-        name: FCTLESS_CUSTOMER
+        name: FCTLESS_CUSTOMER01
         noLinkRefs: []
       - aliases:
           CUSTOMER01: 7ed8aa56-7a49-4718-b560-3925ad01f9d3
@@ -309,7 +309,7 @@ operation:
           joinCondition: FROM {{ ref('WORK', 'CUSTOMER01') }} "CUSTOMER01"
         name: FCT_CUSTOMER_NEW
         noLinkRefs: []
-  name: FCTLESS_CUSTOMER
+  name: FCTLESS_CUSTOMER01
   overrideSQL: false
   schema: ""
   sqlType: "1"
