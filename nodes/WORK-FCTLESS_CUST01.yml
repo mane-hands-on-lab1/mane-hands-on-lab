@@ -54,7 +54,7 @@ operation:
           - columnReferences:
               - columnCounter: f060a235-5596-4a4a-9864-a310b54620a5
                 stepCounter: e5c4169a-c2dd-46ca-87e6-aef7aba48cd6
-            transform: ""
+            transform: UPPER("STG_CUSTOMER".""C_ADDRESS"")
           - columnReferences:
               - columnCounter: c45a881d-3b60-479d-ad18-183343e26aa4
                 stepCounter: 7ed8aa56-7a49-4718-b560-3925ad01f9d3
