@@ -65,7 +65,7 @@ operation:
           stepCounter: 6790ca90-8b95-4c61-8a35-f51d0a2bf408
         config: {}
         dataType: STRING
-        description: Names of customers
+        description: This column consists the Names of customers
         name: CUST_NAME
         nullable: false
         sourceColumnReferences:
