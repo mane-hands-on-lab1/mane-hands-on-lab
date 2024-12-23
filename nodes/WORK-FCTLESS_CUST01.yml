@@ -72,7 +72,7 @@ operation:
           - columnReferences:
               - columnCounter: ad5b97d0-92e4-421e-92f6-aa8139da397c
                 stepCounter: e5c4169a-c2dd-46ca-87e6-aef7aba48cd6
-            transform: UPPER("STG_CUSTOMER".""C_ADDRESS"")
+            transform: ""
           - columnReferences:
               - columnCounter: 85e9bcf5-7d66-4fac-b101-b83732008477
                 stepCounter: 7ed8aa56-7a49-4718-b560-3925ad01f9d3
@@ -289,12 +289,15 @@ operation:
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          DIM_CUSTOMER: e5c4169a-c2dd-46ca-87e6-aef7aba48cd6
+          DIM_ORDERS: 532c7ac6-cc69-4e65-80ad-e3585441db71
+          DIM_SUPPLIER: 6814f6ca-493a-49f8-b0a5-80f25ea64467
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: WORK
-            nodeName: DIM_CUSTOMER
+            nodeName: DIM_ORDERS
+          - locationName: WORK
+            nodeName: DIM_SUPPLIER
         join:
           joinCondition: FROM {{ ref('WORK', 'DIM_CUSTOMER') }} "DIM_CUSTOMER"
         name: FCTLESS_CUST01
