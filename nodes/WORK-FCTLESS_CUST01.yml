@@ -54,7 +54,7 @@ operation:
           - columnReferences:
               - columnCounter: f060a235-5596-4a4a-9864-a310b54620a5
                 stepCounter: e5c4169a-c2dd-46ca-87e6-aef7aba48cd6
-            transform: UPPER("STG_CUSTOMER".""C_ADDRESS"")
+            transform: UPPER("STG_CUSTOMER"."C_NAME")
           - columnReferences:
               - columnCounter: c45a881d-3b60-479d-ad18-183343e26aa4
                 stepCounter: 7ed8aa56-7a49-4718-b560-3925ad01f9d3
@@ -289,17 +289,20 @@ operation:
     enabledColumnTestIDs: []
     sourceMapping:
       - aliases:
-          DIM_ORDERS: 532c7ac6-cc69-4e65-80ad-e3585441db71
+          DIM_CUSTOMER: e5c4169a-c2dd-46ca-87e6-aef7aba48cd6
           DIM_SUPPLIER: 6814f6ca-493a-49f8-b0a5-80f25ea64467
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: WORK
-            nodeName: DIM_ORDERS
+            nodeName: DIM_CUSTOMER
           - locationName: WORK
             nodeName: DIM_SUPPLIER
         join:
-          joinCondition: FROM {{ ref('WORK', 'DIM_CUSTOMER') }} "DIM_CUSTOMER"
+          joinCondition: |-
+            FROM {{ ref('WORK', 'DIM_CUSTOMER') }} "DIM_CUSTOMER"
+            INNER JOIN{{ref('WORK', 'DIM_SUPPLIER') }}"DIM_SUPPLIER"
+            ON "DIM_CUSTOMER"."C_CUSTKEY" = "DIM_SUPPLIER"."DIM_SUPPLIER_KEY"
         name: FCTLESS_CUST01
         noLinkRefs: []
       - aliases:
