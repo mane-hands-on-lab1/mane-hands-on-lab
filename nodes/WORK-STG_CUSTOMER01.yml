@@ -22,7 +22,7 @@ operation:
           columnCounter: 9ceefc98-efa0-402c-a5c4-03c54154af4b
           stepCounter: cbcac104-5315-4f3c-969a-d1fd58d49479
         config: {}
-        dataType: FLOAT
+        dataType: NUMBER(38,0)
         description: ""
         name: CUST_KEY
         nullable: true
