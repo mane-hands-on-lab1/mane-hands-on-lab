@@ -118,7 +118,7 @@ operation:
           columnCounter: 83b0ae7b-ce23-44ee-85e6-cf6582f9538b
           stepCounter: 6790ca90-8b95-4c61-8a35-f51d0a2bf408
         config: {}
-        dataType: VARCHAR
+        dataType: VARCHAR(252)
         description: ""
         name: SYSTEM_CURRENT_FLAG
         nullable: true
