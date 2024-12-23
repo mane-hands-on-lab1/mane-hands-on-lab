@@ -31,7 +31,7 @@ operation:
         dataType: STRING
         description: This column shows the address
         name: C_ADDRESS
-        nullable: false
+        nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: ad5b97d0-92e4-421e-92f6-aa8139da397c
