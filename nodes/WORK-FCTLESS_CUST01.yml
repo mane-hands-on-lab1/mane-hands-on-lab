@@ -54,7 +54,7 @@ operation:
           - columnReferences:
               - columnCounter: ad5b97d0-92e4-421e-92f6-aa8139da397c
                 stepCounter: e5c4169a-c2dd-46ca-87e6-aef7aba48cd6
-            transform: ""
+            transform: UPPER("STG_CUSTOMER".""C_ADDRESS"")
           - columnReferences:
               - columnCounter: 85e9bcf5-7d66-4fac-b101-b83732008477
                 stepCounter: 7ed8aa56-7a49-4718-b560-3925ad01f9d3
@@ -288,7 +288,8 @@ operation:
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          DIM_CUSTOMER: e5c4169a-c2dd-46ca-87e6-aef7aba48cd6
         customSQL:
           customSQL: ""
         dependencies:
