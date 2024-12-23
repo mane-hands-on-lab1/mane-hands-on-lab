@@ -29,7 +29,7 @@ operation:
           stepCounter: 6790ca90-8b95-4c61-8a35-f51d0a2bf408
         config: {}
         dataType: STRING
-        description: This is the column description
+        description: This column shows the address
         name: C_ADDRESS
         nullable: false
         sourceColumnReferences:
