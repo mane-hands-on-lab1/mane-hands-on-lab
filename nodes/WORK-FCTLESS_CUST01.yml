@@ -285,6 +285,25 @@ operation:
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 676bf031-cd91-4796-92f7-a7b9ae6f42e8
+          stepCounter: 6790ca90-8b95-4c61-8a35-f51d0a2bf408
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        hashDetails:
+          hashAlgorithm: SHA1
+        hashedColumns:
+          - columnCounter: 2d1de506-fb68-4a89-a1a7-190e9944cb51
+            stepCounter: 6790ca90-8b95-4c61-8a35-f51d0a2bf408
+        name: HK_CUSTOMER_H
+        nullable: true
+        sourceColumnReferences: []
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
