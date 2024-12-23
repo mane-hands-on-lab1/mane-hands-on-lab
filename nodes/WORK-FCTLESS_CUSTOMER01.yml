@@ -48,7 +48,7 @@ operation:
         config: {}
         dataType: STRING
         description: ""
-        name: C_NAME
+        name: CUST_NAME
         nullable: false
         sourceColumnReferences:
           - columnReferences:
