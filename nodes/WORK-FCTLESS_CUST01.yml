@@ -43,24 +43,6 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 2c1260cc-1763-4a5d-b5d9-af5b5a392ff2
-          stepCounter: 6790ca90-8b95-4c61-8a35-f51d0a2bf408
-        config: {}
-        dataType: STRING
-        description: ""
-        name: C_ADDRESS
-        nullable: false
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: ad5b97d0-92e4-421e-92f6-aa8139da397c
-                stepCounter: e5c4169a-c2dd-46ca-87e6-aef7aba48cd6
-            transform: UPPER("STG_CUSTOMER".""C_ADDRESS"")
-          - columnReferences:
-              - columnCounter: 85e9bcf5-7d66-4fac-b101-b83732008477
-                stepCounter: 7ed8aa56-7a49-4718-b560-3925ad01f9d3
-            transform: ""
-      - appliedColumnTests: {}
-        columnReference:
           columnCounter: b6409ff2-954b-4b05-a083-b1b51d4c0a29
           stepCounter: 6790ca90-8b95-4c61-8a35-f51d0a2bf408
         config: {}
@@ -75,6 +57,24 @@ operation:
             transform: ""
           - columnReferences:
               - columnCounter: c45a881d-3b60-479d-ad18-183343e26aa4
+                stepCounter: 7ed8aa56-7a49-4718-b560-3925ad01f9d3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2c1260cc-1763-4a5d-b5d9-af5b5a392ff2
+          stepCounter: 6790ca90-8b95-4c61-8a35-f51d0a2bf408
+        config: {}
+        dataType: STRING
+        description: ""
+        name: C_ADDRESS
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ad5b97d0-92e4-421e-92f6-aa8139da397c
+                stepCounter: e5c4169a-c2dd-46ca-87e6-aef7aba48cd6
+            transform: UPPER("STG_CUSTOMER".""C_ADDRESS"")
+          - columnReferences:
+              - columnCounter: 85e9bcf5-7d66-4fac-b101-b83732008477
                 stepCounter: 7ed8aa56-7a49-4718-b560-3925ad01f9d3
             transform: ""
       - appliedColumnTests: {}
