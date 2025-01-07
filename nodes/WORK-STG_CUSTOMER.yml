@@ -10,7 +10,7 @@ operation:
     truncateBefore: false
   database: ""
   deployEnabled: true
-  description: Customer data as defined by TPC-H
+  description: Customer data as defined here by TPC-H
   isMultisource: false
   locationName: WORK
   materializationType: table
@@ -129,6 +129,26 @@ operation:
               - columnCounter: 70eed7ba-e2c2-4f2d-9d57-48cc44d6f780
                 stepCounter: 0991b381-8e17-464b-8727-4462e43d5894
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b9ad1a9f-199a-492f-8dce-13d0aa008b82
+          stepCounter: 6228be6b-7a33-4d9d-86d9-996fb7a9d2ca
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: C_TRIAL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
