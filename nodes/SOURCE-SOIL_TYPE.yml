@@ -1,0 +1,77 @@
+fileVersion: 1
+id: db0b4a23-11a5-43db-829c-9530c6b3706b
+name: SOIL_TYPE
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 902fd7ee-8d3c-45e2-bcb3-48d68d6c900c
+          stepCounter: db0b4a23-11a5-43db-829c-9530c6b3706b
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: SOIL_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e530609d-fb36-42de-8ba0-8ee769767f5a
+          stepCounter: db0b4a23-11a5-43db-829c-9530c6b3706b
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: SOIL_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 82303bee-9cc7-41a3-bbfc-06096209098b
+          stepCounter: db0b4a23-11a5-43db-829c-9530c6b3706b
+        config: {}
+        dataType: VARCHAR(75)
+        defaultValue: ""
+        description: ""
+        name: SOIL_DESCRIPTION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'SOIL_TYPE') }}
+  name: SOIL_TYPE
+  schema: ""
+  sqlType: Source
+  table: SOIL_TYPE
+  type: sourceInput
+  version: 1
+type: Node

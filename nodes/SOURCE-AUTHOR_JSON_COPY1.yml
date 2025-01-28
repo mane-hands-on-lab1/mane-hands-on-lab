@@ -1,0 +1,96 @@
+fileVersion: 1
+id: 4e7dd5d8-ccef-4ebc-9f95-3b3e4d5be5a1
+name: AUTHOR_JSON_COPY1
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 09d884b1-812e-4034-bb78-e359176e7db9
+          stepCounter: 4e7dd5d8-ccef-4ebc-9f95-3b3e4d5be5a1
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: AUTHOR_UID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 261fab4b-bdd7-4d60-a5ea-e3fe3aaa9240
+          stepCounter: 4e7dd5d8-ccef-4ebc-9f95-3b3e4d5be5a1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: FIRST_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a75e093a-a7a5-481d-baec-14658bc53f24
+          stepCounter: 4e7dd5d8-ccef-4ebc-9f95-3b3e4d5be5a1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: MIDDLE_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad5b92c8-4a02-4f9c-82b9-032eb5fd72a5
+          stepCounter: 4e7dd5d8-ccef-4ebc-9f95-3b3e4d5be5a1
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LAST_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'AUTHOR_JSON_COPY1') }}
+  name: AUTHOR_JSON_COPY1
+  schema: ""
+  sqlType: Source
+  table: AUTHOR_JSON_COPY1
+  type: sourceInput
+  version: 1
+type: Node

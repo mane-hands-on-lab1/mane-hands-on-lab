@@ -1,0 +1,246 @@
+fileVersion: 1
+id: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+name: WRK_USER_ACTIVITY1_STOCK_PRICE_HISTORY1_TRIAL
+operation:
+  config:
+    asofColumn:
+      items:
+        - {}
+    asofJoin: true
+    asofJoinMain: false
+    asofJoinON: false
+    asofJoinUSING: false
+    clusterKey: false
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: false
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 92fa3dab-625f-43e0-8eb4-2dce8bcef392
+          stepCounter: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4b4c422c-bff2-43b1-b55b-8a836b811c9c
+                stepCounter: e7a35b5d-6099-4c46-b0b1-a5b99d32c403
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 14d3a505-ce86-4ec7-b9db-ebcdd8875d95
+          stepCounter: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+        config: {}
+        dataType: DATE
+        description: ""
+        name: EVENT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cbf85092-d7a7-42bb-bc30-a85e4dae5346
+                stepCounter: e7a35b5d-6099-4c46-b0b1-a5b99d32c403
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8dd1f48e-f8e7-4857-8b9f-de69835cdde5
+          stepCounter: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: EVENT_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6826c0f9-0e86-4aff-8016-8b2f39653c17
+                stepCounter: e7a35b5d-6099-4c46-b0b1-a5b99d32c403
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8fdee652-b6eb-4d95-9c29-a3f601518aa4
+          stepCounter: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+        config: {}
+        dataType: NUMBER(18,0)
+        description: ""
+        name: MATCH_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 499f14f1-8176-4430-a578-699a5a996c07
+                stepCounter: e7a35b5d-6099-4c46-b0b1-a5b99d32c403
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bc63e993-08fa-43f5-ac44-cae3f246631f
+          stepCounter: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+        config: {}
+        dataType: NUMBER(18,0)
+        description: ""
+        name: EVENT_SEQ
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fb99fd6b-dacb-40f0-93ce-4ebcba2cbc57
+                stepCounter: e7a35b5d-6099-4c46-b0b1-a5b99d32c403
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c6a62d7-cdbc-4f92-a4be-a5f3c294c588
+          stepCounter: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+        config: {}
+        dataType: NUMBER(18,0)
+        description: ""
+        name: EVENT_COUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f3e8201a-e327-4c09-9965-67b17f0d2107
+                stepCounter: e7a35b5d-6099-4c46-b0b1-a5b99d32c403
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e83ad141-bdf8-42a1-995e-bbe27b76a445
+          stepCounter: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: COMPANY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c42d82ab-5040-426b-87bf-387108a30840
+                stepCounter: d5117f0d-f6f7-45de-91be-a790ef5fb059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1eaf6b72-afb3-4deb-9520-8b64b3ebe7e6
+          stepCounter: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+        config: {}
+        dataType: NUMBER(18,0)
+        description: ""
+        name: MATCH_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c392b433-55cc-4c2e-8495-6062d95be9de
+                stepCounter: d5117f0d-f6f7-45de-91be-a790ef5fb059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18da6621-79ee-4d25-8cb9-1129c568e767
+          stepCounter: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+        config: {}
+        dataType: DATE
+        description: ""
+        name: START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e27109e0-8126-4e4a-a3f2-c6d8920d7b14
+                stepCounter: d5117f0d-f6f7-45de-91be-a790ef5fb059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 08a5ed3b-bc5c-477d-81fc-b83f90cb41e4
+          stepCounter: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+        config: {}
+        dataType: DATE
+        description: ""
+        name: END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 09227c1a-d98e-44d6-ba60-fd8bb2dbf5a4
+                stepCounter: d5117f0d-f6f7-45de-91be-a790ef5fb059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bb30eba3-85ff-4b47-8779-a354f4638e4a
+          stepCounter: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+        config: {}
+        dataType: NUMBER(18,0)
+        description: ""
+        name: ROWS_IN_SEQUENCE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ae8c4c8e-dcf9-4b46-82d3-0142aef10201
+                stepCounter: d5117f0d-f6f7-45de-91be-a790ef5fb059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 76cc1344-dce0-49d2-8e38-ec97c64a2953
+          stepCounter: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+        config: {}
+        dataType: NUMBER(18,0)
+        description: ""
+        name: NUM_DECREASES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c6683161-d351-47d1-9d9b-c842d1e591b1
+                stepCounter: d5117f0d-f6f7-45de-91be-a790ef5fb059
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7667acea-f590-48d2-92ef-f179452f4fab
+          stepCounter: 8f73dddb-9807-48c0-9800-2a7d0d2e94dc
+        config: {}
+        dataType: NUMBER(18,0)
+        description: ""
+        name: NUM_INCREASES
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b91d8630-58fe-48cf-ad85-7cd0ba202e45
+                stepCounter: d5117f0d-f6f7-45de-91be-a790ef5fb059
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: MR_STOCK_PRICE_HISTORY1_TRIAL
+          - locationName: WORK
+            nodeName: MR_USER_ACTIVITY1
+        join:
+          joinCondition: |+
+
+
+        name: WRK_USER_ACTIVITY1_STOCK_PRICE_HISTORY1_TRIAL
+        noLinkRefs: []
+  name: WRK_USER_ACTIVITY1_STOCK_PRICE_HISTORY1_TRIAL
+  overrideSQL: false
+  schema: ""
+  sqlType: "22"
+  type: sql
+  version: 1
+type: Node

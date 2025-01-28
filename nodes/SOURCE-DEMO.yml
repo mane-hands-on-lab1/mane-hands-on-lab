@@ -1,0 +1,58 @@
+fileVersion: 1
+id: 2962a4a5-3020-47c4-bb9f-a4bdb14c48d0
+name: DEMO
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2e2e26d4-4dc6-4ad9-9ba9-ba49c55ef07b
+          stepCounter: 2962a4a5-3020-47c4-bb9f-a4bdb14c48d0
+        config: {}
+        dataType: VARCHAR(25)
+        defaultValue: ""
+        description: ""
+        name: PLANT_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0abf25e-31af-4dc4-8866-c2c006491ce2
+          stepCounter: 2962a4a5-3020-47c4-bb9f-a4bdb14c48d0
+        config: {}
+        dataType: NUMBER(1,0)
+        defaultValue: ""
+        description: ""
+        name: SOIL_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'DEMO') }}
+  name: DEMO
+  schema: ""
+  sqlType: Source
+  table: DEMO
+  type: sourceInput
+  version: 1
+type: Node

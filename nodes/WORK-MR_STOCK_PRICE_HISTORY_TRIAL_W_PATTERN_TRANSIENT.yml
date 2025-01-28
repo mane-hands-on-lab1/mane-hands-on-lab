@@ -1,0 +1,186 @@
+fileVersion: 1
+id: 28759fa9-03b6-497b-b454-09304c8d7d8d
+name: MR_STOCK_PRICE_HISTORY_TRIAL_W_PATTERN_TRANSIENT
+operation:
+  config:
+    afterMatchSkip: TO
+    allRowsPerMatch: ""
+    inferMatchRecognize: true
+    orderBy:
+      items:
+        - orderByCol:
+            columnCounter: 81328523-8cfe-4c94-ab65-2045658914e2
+            stepCounter: 28759fa9-03b6-497b-b454-09304c8d7d8d
+          orderByTextBox: null
+    partitionBy:
+      items:
+        - partitionByCol:
+            columnCounter: c96cb6a9-178a-4e63-9a48-057c381721f1
+            stepCounter: 28759fa9-03b6-497b-b454-09304c8d7d8d
+          partitionByColTextBox: null
+    pattern: (W x+ y+ w+ z+)
+    rowsPerMatch: ONE ROW PER MATCH
+    selectOrderBy:
+      items:
+        - selectOrderByCol:
+            columnCounter: c96cb6a9-178a-4e63-9a48-057c381721f1
+            stepCounter: 28759fa9-03b6-497b-b454-09304c8d7d8d
+          selectOrderByTextBox: null
+        - selectOrderByCol:
+            columnCounter: 81328523-8cfe-4c94-ab65-2045658914e2
+            stepCounter: 28759fa9-03b6-497b-b454-09304c8d7d8d
+          selectOrderByTextBox: null
+    tabDefine:
+      items:
+        - valDefineColumnName: X
+          valDefineExpression: PRICE <= LAG(PRICE)
+        - valDefineColumnName: "Y"
+          valDefineExpression: PRICE >= LAG(PRICE)
+        - valDefineColumnName: W
+          valDefineExpression: PRICE <= LAG(PRICE)
+        - valDefineColumnName: Z
+          valDefineExpression: PRICE >= LAG(PRICE)
+    tabMeasures:
+      items:
+        - valAliasExpressionColumnName: MATCH_NUMBER
+          valMeasureColumnName: null
+          valMeasureExpression: MATCH_NUMBER
+        - valAliasExpressionColumnName: START_W
+          valMeasureColumnName: DATE
+          valMeasureExpression: FIRST
+        - valAliasExpressionColumnName: END_W
+          valMeasureColumnName: DATE
+          valMeasureExpression: LAST
+        - valAliasExpressionColumnName: ROWS_IN_SEQUENCE
+          valMeasureColumnName: "*"
+          valMeasureExpression: COUNT
+    tabSelectFunction:
+      items:
+        - {}
+    testsEnabled: false
+    to: LAST
+    toggleOrderBy: true
+    togglePartitionBy: true
+    toggleSelectFunction: false
+    toggleSelectOrderBy: true
+    truncateBefore: true
+    varAfterMatchSkip: Z
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: transient table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c96cb6a9-178a-4e63-9a48-057c381721f1
+          stepCounter: 28759fa9-03b6-497b-b454-09304c8d7d8d
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 580f3dcf-e30c-42b8-a920-669da99bb848
+                stepCounter: 9d614afa-5def-4195-8e36-32f583329cbd
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: be2577a4-710e-49fd-a1b2-f3c65da7ac63
+          stepCounter: 28759fa9-03b6-497b-b454-09304c8d7d8d
+        config: {}
+        dataType: NUMBER(18,0)
+        defaultValue: ""
+        description: ""
+        name: MATCH_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 81328523-8cfe-4c94-ab65-2045658914e2
+          stepCounter: 28759fa9-03b6-497b-b454-09304c8d7d8d
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: START_W
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ae1791b4-ba08-4339-847e-fddc53b2539b
+          stepCounter: 28759fa9-03b6-497b-b454-09304c8d7d8d
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: END_W
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b1dcfa2a-7cac-4597-b190-5d841bde67a8
+          stepCounter: 28759fa9-03b6-497b-b454-09304c8d7d8d
+        config: {}
+        dataType: NUMBER(18,0)
+        defaultValue: ""
+        description: ""
+        name: ROWS_IN_SEQUENCE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_STOCK_PRICE_HISTORY_TRIAL
+        join:
+          joinCondition: FROM {{ ref('WORK', 'STG_STOCK_PRICE_HISTORY_TRIAL') }} "STG_STOCK_PRICE_HISTORY_TRIAL"
+        name: MR_STOCK_PRICE_HISTORY_TRIAL_W_PATTERN_TRANSIENT
+        noLinkRefs: []
+  name: MR_STOCK_PRICE_HISTORY_TRIAL_W_PATTERN_TRANSIENT
+  overrideSQL: false
+  schema: ""
+  sqlType: "19"
+  type: sql
+  version: 1
+type: Node

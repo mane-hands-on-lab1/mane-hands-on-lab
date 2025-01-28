@@ -1,0 +1,181 @@
+fileVersion: 1
+id: 4d827462-38ad-44b1-9222-a493c2f56156
+name: MR_USER_ACTIVITY_INFER_TRANSIENT
+operation:
+  config:
+    afterMatchSkip: TO
+    allRowsPerMatch: ""
+    inferMatchRecognize: false
+    orderBy:
+      items:
+        - orderByCol:
+            columnCounter: 4bb59dbb-3248-4b78-9c33-f17c87780a35
+            stepCounter: 4d827462-38ad-44b1-9222-a493c2f56156
+          orderByTextBox: null
+    partitionBy:
+      items:
+        - partitionByCol:
+            columnCounter: 4de6ed74-e06b-49c2-8d78-9df6673a46e8
+            stepCounter: 4d827462-38ad-44b1-9222-a493c2f56156
+          partitionByColTextBox: null
+    pattern: (signup upgrade+ downgrade)
+    rowsPerMatch: ALL ROWS PER MATCH
+    selectOrderBy:
+      items:
+        - {}
+    tabDefine:
+      items:
+        - valDefineColumnName: UPGRADE
+          valDefineExpression: EVENT_TYPE = 'UPGRADE'
+        - valDefineColumnName: DOWNGRADE
+          valDefineExpression: EVENT_TYPE = 'DOWNGRADE'
+    tabMeasures:
+      items:
+        - valAliasExpressionColumnName: MATCH_NUM
+          valMeasureColumnName: null
+          valMeasureExpression: MATCH_NUMBER
+        - valAliasExpressionColumnName: EVENT_SEQ
+          valMeasureColumnName: null
+          valMeasureExpression: MATCH_SEQUENCE_NUMBER
+        - valAliasExpressionColumnName: EVENT_COUNT
+          valMeasureColumnName: "*"
+          valMeasureExpression: COUNT
+    tabSelectFunction:
+      items:
+        - {}
+    testsEnabled: false
+    to: LAST
+    toggleOrderBy: true
+    togglePartitionBy: true
+    toggleSelectFunction: false
+    toggleSelectOrderBy: false
+    truncateBefore: true
+    varAfterMatchSkip: UPGRADE
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: transient table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4de6ed74-e06b-49c2-8d78-9df6673a46e8
+          stepCounter: 4d827462-38ad-44b1-9222-a493c2f56156
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1e155e2a-3970-4132-af62-0f69fa5acadc
+                stepCounter: 9c0fc90a-eb60-4df3-a5c0-9d4087be43b4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4bb59dbb-3248-4b78-9c33-f17c87780a35
+          stepCounter: 4d827462-38ad-44b1-9222-a493c2f56156
+        config: {}
+        dataType: DATE
+        description: ""
+        name: EVENT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5cad498a-9e04-4caa-ba3b-05d7abd8dc78
+                stepCounter: 9c0fc90a-eb60-4df3-a5c0-9d4087be43b4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 001746ff-77ef-43c7-903f-8836803cbf35
+          stepCounter: 4d827462-38ad-44b1-9222-a493c2f56156
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: EVENT_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 022d4c85-b1a6-47ef-8d69-68bb9186088a
+                stepCounter: 9c0fc90a-eb60-4df3-a5c0-9d4087be43b4
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 696cb449-a957-4596-8cf6-71ef729c540a
+          stepCounter: 4d827462-38ad-44b1-9222-a493c2f56156
+        config: {}
+        dataType: NUMBER(18,0)
+        defaultValue: ""
+        description: ""
+        name: MATCH_NUM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3539b457-7906-48fe-b442-e4bc72012f40
+          stepCounter: 4d827462-38ad-44b1-9222-a493c2f56156
+        config: {}
+        dataType: NUMBER(18,0)
+        defaultValue: ""
+        description: ""
+        name: EVENT_SEQ
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f3f9e2d-15f4-4242-bfff-060aec6a0cc4
+          stepCounter: 4d827462-38ad-44b1-9222-a493c2f56156
+        config: {}
+        dataType: NUMBER(18,0)
+        defaultValue: ""
+        description: ""
+        name: EVENT_COUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_USER_ACTIVITY
+        join:
+          joinCondition: FROM {{ ref('WORK', 'STG_USER_ACTIVITY') }} "STG_USER_ACTIVITY"
+        name: MR_USER_ACTIVITY_INFER_TRANSIENT
+        noLinkRefs: []
+  name: MR_USER_ACTIVITY_INFER_TRANSIENT
+  overrideSQL: false
+  schema: ""
+  sqlType: "19"
+  type: sql
+  version: 1
+type: Node

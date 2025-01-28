@@ -1,0 +1,77 @@
+fileVersion: 1
+id: 3dc3b393-6f57-424e-8fbc-bb1d4b6cfb53
+name: USER_ACTIVITY
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 48e962f6-5345-4c70-8442-cb49d1defcd1
+          stepCounter: 3dc3b393-6f57-424e-8fbc-bb1d4b6cfb53
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2ba3d6d2-9bcb-430c-9bc8-79e1eb920341
+          stepCounter: 3dc3b393-6f57-424e-8fbc-bb1d4b6cfb53
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: EVENT_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bb9d2830-f780-4302-9764-5804ad5494ab
+          stepCounter: 3dc3b393-6f57-424e-8fbc-bb1d4b6cfb53
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: EVENT_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'USER_ACTIVITY') }}
+  name: USER_ACTIVITY
+  schema: ""
+  sqlType: Source
+  table: USER_ACTIVITY
+  type: sourceInput
+  version: 1
+type: Node

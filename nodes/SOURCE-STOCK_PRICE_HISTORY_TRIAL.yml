@@ -1,0 +1,77 @@
+fileVersion: 1
+id: b5e01d57-49fe-4464-9e68-17dcbf34e325
+name: STOCK_PRICE_HISTORY_TRIAL
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 95e91820-8050-45ce-ab7b-39296c80d2b5
+          stepCounter: b5e01d57-49fe-4464-9e68-17dcbf34e325
+        config: {}
+        dataType: VARCHAR(2)
+        defaultValue: ""
+        description: ""
+        name: NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d17777da-7ca0-43ae-a7f4-adc1b209ce47
+          stepCounter: b5e01d57-49fe-4464-9e68-17dcbf34e325
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e73f4a68-f20c-4e23-a052-6c179e309718
+          stepCounter: b5e01d57-49fe-4464-9e68-17dcbf34e325
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PRICE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'STOCK_PRICE_HISTORY_TRIAL') }}
+  name: STOCK_PRICE_HISTORY_TRIAL
+  schema: ""
+  sqlType: Source
+  table: STOCK_PRICE_HISTORY_TRIAL
+  type: sourceInput
+  version: 1
+type: Node

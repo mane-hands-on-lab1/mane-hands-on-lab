@@ -1,0 +1,77 @@
+fileVersion: 1
+id: 9809c988-83e0-45d7-808c-7463a739538d
+name: LU_SOIL_TYPE
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32d48ddf-c8a6-4f6f-83b5-8723f06bff8d
+          stepCounter: 9809c988-83e0-45d7-808c-7463a739538d
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: SOIL_TYPE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e1c4dc0b-23d4-4b10-a3e9-e72081ef9791
+          stepCounter: 9809c988-83e0-45d7-808c-7463a739538d
+        config: {}
+        dataType: VARCHAR(15)
+        defaultValue: ""
+        description: ""
+        name: SOIL_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 39e574c0-35be-4a44-8563-35ad8b68f061
+          stepCounter: 9809c988-83e0-45d7-808c-7463a739538d
+        config: {}
+        dataType: VARCHAR(75)
+        defaultValue: ""
+        description: ""
+        name: SOIL_DESCRIPTION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'LU_SOIL_TYPE') }}
+  name: LU_SOIL_TYPE
+  schema: ""
+  sqlType: Source
+  table: LU_SOIL_TYPE
+  type: sourceInput
+  version: 1
+type: Node

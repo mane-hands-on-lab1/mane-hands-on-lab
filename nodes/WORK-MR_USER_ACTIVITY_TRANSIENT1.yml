@@ -1,0 +1,120 @@
+fileVersion: 1
+id: 742984c1-07c9-4f41-849d-b84d02b4f539
+name: MR_USER_ACTIVITY_TRANSIENT1
+operation:
+  config:
+    afterMatchSkip: TO
+    allRowsPerMatch: ""
+    inferMatchRecognize: true
+    orderBy:
+      items:
+        - orderByCol:
+            columnCounter: 1d14213c-d5c3-45bd-8c0b-640da66a1fdd
+            stepCounter: 742984c1-07c9-4f41-849d-b84d02b4f539
+          orderByTextBox: null
+    partitionBy:
+      items:
+        - partitionByCol:
+            columnCounter: 01976cf6-dd96-416f-938d-02bb9285a7cc
+            stepCounter: 742984c1-07c9-4f41-849d-b84d02b4f539
+          partitionByColTextBox: null
+    pattern: (signup upgrade+ downgrade*)
+    rowsPerMatch: ALL ROWS PER MATCH
+    selectOrderBy:
+      items:
+        - {}
+    tabDefine:
+      items:
+        - valDefineColumnName: UPGRADE
+          valDefineExpression: EVENT_TYPE = 'UPGRADE'
+        - valDefineColumnName: DOWNGRADE
+          valDefineExpression: EVENT_TYPE = 'DOWNGRADE'
+    tabMeasures:
+      items:
+        - valAliasExpressionColumnName: MATCH_NUM
+          valMeasureColumnName: null
+          valMeasureExpression: MATCH_NUMBER
+        - valAliasExpressionColumnName: EVENT_SEQ
+          valMeasureColumnName: null
+          valMeasureExpression: MATCH_SEQUENCE_NUMBER
+        - valAliasExpressionColumnName: EVENT_COUNT
+          valMeasureColumnName: "*"
+          valMeasureExpression: COUNT
+    testsEnabled: false
+    to: LAST
+    toggleOrderBy: true
+    togglePartitionBy: true
+    toggleSelectOrderBy: false
+    truncateBefore: true
+    varAfterMatchSkip: UPGRADE
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: transient table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01976cf6-dd96-416f-938d-02bb9285a7cc
+          stepCounter: 742984c1-07c9-4f41-849d-b84d02b4f539
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1e155e2a-3970-4132-af62-0f69fa5acadc
+                stepCounter: 9c0fc90a-eb60-4df3-a5c0-9d4087be43b4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1d14213c-d5c3-45bd-8c0b-640da66a1fdd
+          stepCounter: 742984c1-07c9-4f41-849d-b84d02b4f539
+        config: {}
+        dataType: DATE
+        description: ""
+        name: EVENT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5cad498a-9e04-4caa-ba3b-05d7abd8dc78
+                stepCounter: 9c0fc90a-eb60-4df3-a5c0-9d4087be43b4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: adce2170-369d-4abf-b50d-b53dd528956b
+          stepCounter: 742984c1-07c9-4f41-849d-b84d02b4f539
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: EVENT_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 022d4c85-b1a6-47ef-8d69-68bb9186088a
+                stepCounter: 9c0fc90a-eb60-4df3-a5c0-9d4087be43b4
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_USER_ACTIVITY
+        join:
+          joinCondition: FROM {{ ref('WORK', 'STG_USER_ACTIVITY') }} "STG_USER_ACTIVITY"
+        name: MR_USER_ACTIVITY_TRANSIENT1
+        noLinkRefs: []
+  name: MR_USER_ACTIVITY_TRANSIENT1
+  overrideSQL: false
+  schema: ""
+  sqlType: "19"
+  type: sql
+  version: 1
+type: Node

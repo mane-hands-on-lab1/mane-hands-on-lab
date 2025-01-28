@@ -1,0 +1,77 @@
+fileVersion: 1
+id: 178cdfc7-60df-4718-b389-d5467e0ee6a3
+name: TRADES
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 014d468e-8b91-44c0-b699-d12bfcb1dba6
+          stepCounter: 178cdfc7-60df-4718-b389-d5467e0ee6a3
+        config: {}
+        dataType: VARCHAR(4)
+        defaultValue: ""
+        description: ""
+        name: STOCK_SYMBOL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 76fada53-de2d-4fbd-87e2-ad2ba073df4e
+          stepCounter: 178cdfc7-60df-4718-b389-d5467e0ee6a3
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: TRADE_TIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: daa5ffa9-088a-4dea-983b-df4c95c86c62
+          stepCounter: 178cdfc7-60df-4718-b389-d5467e0ee6a3
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: QUANTITY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'TRADES') }}
+  name: TRADES
+  schema: ""
+  sqlType: Source
+  table: TRADES
+  type: sourceInput
+  version: 1
+type: Node

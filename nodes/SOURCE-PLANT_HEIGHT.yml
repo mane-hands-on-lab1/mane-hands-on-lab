@@ -1,0 +1,96 @@
+fileVersion: 1
+id: bb169715-4f3d-4c6b-b6d6-8d72224630be
+name: PLANT_HEIGHT
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f85f37ac-b418-41ab-a7aa-7e0e892490c9
+          stepCounter: bb169715-4f3d-4c6b-b6d6-8d72224630be
+        config: {}
+        dataType: VARCHAR(30)
+        defaultValue: ""
+        description: ""
+        name: PLANT_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 721d8f44-0bbf-4be6-a25f-9d769cab0e0e
+          stepCounter: bb169715-4f3d-4c6b-b6d6-8d72224630be
+        config: {}
+        dataType: VARCHAR(15)
+        defaultValue: ""
+        description: ""
+        name: UOM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 775f9571-699e-4e37-9b25-ef65518d0f3a
+          stepCounter: bb169715-4f3d-4c6b-b6d6-8d72224630be
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: LOW_END_OF_RANGE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 94df1e63-f380-4d84-bd1e-a2b2d1318c2c
+          stepCounter: bb169715-4f3d-4c6b-b6d6-8d72224630be
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: HIGH_END_OF_RANGE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'PLANT_HEIGHT') }}
+  name: PLANT_HEIGHT
+  schema: ""
+  sqlType: Source
+  table: PLANT_HEIGHT
+  type: sourceInput
+  version: 1
+type: Node

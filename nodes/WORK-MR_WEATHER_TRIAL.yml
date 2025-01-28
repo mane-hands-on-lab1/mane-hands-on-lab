@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 055515d3-d1b5-46c1-9d4f-b86e8cb3e562
+name: MR_WEATHER_TRIAL
+operation:
+  config:
+    afterMatchSkip: PAST LAST ROW
+    allRowsPerMatch: ""
+    inferMatchRecognize: false
+    orderBy:
+      items:
+        - orderByCol:
+            columnCounter: e84cdc75-3200-4e5c-b007-afc64df6670f
+            stepCounter: 055515d3-d1b5-46c1-9d4f-b86e8cb3e562
+          orderByTextBox: null
+    partitionBy:
+      items:
+        - {}
+    pattern: (COLD WARM+)
+    rowsPerMatch: ONE ROW PER MATCH
+    selectOrderBy:
+      items:
+        - {}
+    tabDefine:
+      items:
+        - valDefineColumnName: COLD
+          valDefineExpression: TEMP < 60
+        - valDefineColumnName: "WARM "
+          valDefineExpression: TEMP >=60
+    tabMeasures:
+      items:
+        - valAliasExpressionColumnName: DAY_COUNT
+          valMeasureColumnName: "*"
+          valMeasureExpression: COUNT
+    tabSelectFunction:
+      items:
+        - {}
+    testsEnabled: false
+    to: ""
+    toggleOrderBy: true
+    togglePartitionBy: false
+    toggleSelectFunction: false
+    toggleSelectOrderBy: false
+    truncateBefore: true
+    varAfterMatchSkip: ""
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e84cdc75-3200-4e5c-b007-afc64df6670f
+          stepCounter: 055515d3-d1b5-46c1-9d4f-b86e8cb3e562
+        config: {}
+        dataType: NUMBER(18,0)
+        defaultValue: ""
+        description: ""
+        name: DAY_COUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_WEATHER
+        join:
+          joinCondition: FROM {{ ref('WORK', 'STG_WEATHER') }} "STG_WEATHER"
+        name: MR_WEATHER_TRIAL
+        noLinkRefs: []
+  name: MR_WEATHER_TRIAL
+  overrideSQL: false
+  schema: ""
+  sqlType: "19"
+  type: sql
+  version: 1
+type: Node

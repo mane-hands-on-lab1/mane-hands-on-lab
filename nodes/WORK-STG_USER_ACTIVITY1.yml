@@ -1,0 +1,81 @@
+fileVersion: 1
+id: 52087be3-a1bb-4408-9a53-7af0a8178a64
+name: STG_USER_ACTIVITY1
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bd65c39d-77d7-445f-bde0-24088c853f2d
+          stepCounter: 52087be3-a1bb-4408-9a53-7af0a8178a64
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: afba716f-cbb7-4bf5-bbe0-51de9edc7e90
+                stepCounter: 16d356bf-a1c7-4b00-aefd-13714ec3cde6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 53222cd9-cc0e-493a-a12a-e10fe5bb38d6
+          stepCounter: 52087be3-a1bb-4408-9a53-7af0a8178a64
+        config: {}
+        dataType: DATE
+        description: ""
+        name: EVENT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 78419331-0d9c-4d3b-b0a4-9673a25696d7
+                stepCounter: 16d356bf-a1c7-4b00-aefd-13714ec3cde6
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 03fa7ff3-6ae7-4d04-a3aa-c5cc0748fcb2
+          stepCounter: 52087be3-a1bb-4408-9a53-7af0a8178a64
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: EVENT_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9a29ae2a-45c8-4c39-9f9a-fdb10d93a5bc
+                stepCounter: 16d356bf-a1c7-4b00-aefd-13714ec3cde6
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: USER_ACTIVITY1
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'USER_ACTIVITY1') }} "USER_ACTIVITY1"
+        name: STG_USER_ACTIVITY1
+        noLinkRefs: []
+  name: STG_USER_ACTIVITY1
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

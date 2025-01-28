@@ -1,0 +1,39 @@
+fileVersion: 1
+id: 1c1dd50d-c659-46f4-ad82-0ef9a39643e9
+name: AUTHOR_JSON_COPY
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2dc3e61c-282e-43dc-a06a-e0d1b93bf892
+          stepCounter: 1c1dd50d-c659-46f4-ad82-0ef9a39643e9
+        config: {}
+        dataType: VARIANT
+        defaultValue: ""
+        description: ""
+        name: RAW_AUTHOR
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'AUTHOR_JSON_COPY') }}
+  name: AUTHOR_JSON_COPY
+  schema: ""
+  sqlType: Source
+  table: AUTHOR_JSON_COPY
+  type: sourceInput
+  version: 1
+type: Node

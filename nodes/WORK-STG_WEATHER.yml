@@ -1,0 +1,67 @@
+fileVersion: 1
+id: 4dbc35f5-fa4b-4205-b954-ded5a5e618a0
+name: STG_WEATHER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a5201589-1a41-4e6a-89f1-7c2fc8c0cc38
+          stepCounter: 4dbc35f5-fa4b-4205-b954-ded5a5e618a0
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DAY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e007e962-5e98-4120-97d1-fc7c2048db45
+                stepCounter: 02d82d49-1143-4c97-8ffb-7893ae1c4b39
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01180034-0eb1-49f7-8a66-5babe31dfce0
+          stepCounter: 4dbc35f5-fa4b-4205-b954-ded5a5e618a0
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: TEMP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: addb145d-9c50-448a-9ce5-f34b976f8504
+                stepCounter: 02d82d49-1143-4c97-8ffb-7893ae1c4b39
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: WEATHER
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'WEATHER') }} "WEATHER"
+        name: STG_WEATHER
+        noLinkRefs: []
+  name: STG_WEATHER
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

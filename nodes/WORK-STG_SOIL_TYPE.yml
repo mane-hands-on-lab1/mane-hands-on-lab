@@ -1,0 +1,81 @@
+fileVersion: 1
+id: 01d33666-a6df-4258-934b-9598abfea9b8
+name: STG_SOIL_TYPE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad52f687-1850-4dc9-b022-9b3cff434c80
+          stepCounter: 01d33666-a6df-4258-934b-9598abfea9b8
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: SOIL_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 902fd7ee-8d3c-45e2-bcb3-48d68d6c900c
+                stepCounter: db0b4a23-11a5-43db-829c-9530c6b3706b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 288a7c60-1b08-4b6f-825b-ea604ffdd216
+          stepCounter: 01d33666-a6df-4258-934b-9598abfea9b8
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: SOIL_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e530609d-fb36-42de-8ba0-8ee769767f5a
+                stepCounter: db0b4a23-11a5-43db-829c-9530c6b3706b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ebf7cb95-62d4-48d4-93b1-4e40ed7d783a
+          stepCounter: 01d33666-a6df-4258-934b-9598abfea9b8
+        config: {}
+        dataType: VARCHAR(75)
+        description: ""
+        name: SOIL_DESCRIPTION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 82303bee-9cc7-41a3-bbfc-06096209098b
+                stepCounter: db0b4a23-11a5-43db-829c-9530c6b3706b
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: SOIL_TYPE
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'SOIL_TYPE') }} "SOIL_TYPE"
+        name: STG_SOIL_TYPE
+        noLinkRefs: []
+  name: STG_SOIL_TYPE
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

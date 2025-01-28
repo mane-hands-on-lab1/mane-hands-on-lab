@@ -1,0 +1,107 @@
+fileVersion: 1
+id: d3640933-b4f0-4d6d-a051-23a25127d4e0
+name: MR_TRADES
+operation:
+  config:
+    afterMatchSkip: ""
+    allRowsPerMatch: ""
+    inferMatchRecognize: false
+    orderBy:
+      items:
+        - {}
+    partitionBy:
+      items:
+        - {}
+    pattern: ""
+    rowsPerMatch: ""
+    selectOrderBy:
+      items:
+        - {}
+    tabDefine:
+      items:
+        - {}
+    tabMeasures:
+      items:
+        - {}
+    tabSelectFunction:
+      items:
+        - {}
+    testsEnabled: false
+    to: ""
+    toggleOrderBy: false
+    togglePartitionBy: false
+    toggleSelectFunction: false
+    toggleSelectOrderBy: false
+    truncateBefore: true
+    varAfterMatchSkip: ""
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b4ff9509-2a3a-4081-ad9a-ade38a1b2bf1
+          stepCounter: d3640933-b4f0-4d6d-a051-23a25127d4e0
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: STOCK_SYMBOL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 13d5fcd6-083c-4d1f-8fad-e4c0bfe4c667
+                stepCounter: 35eca694-f09c-4541-9dc5-f3f59bbebd49
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f04f1dae-9e9c-4269-8abe-496b210dd0b4
+          stepCounter: d3640933-b4f0-4d6d-a051-23a25127d4e0
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: TRADE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 57c43c62-e885-4c8e-827d-8772e2c10135
+                stepCounter: 35eca694-f09c-4541-9dc5-f3f59bbebd49
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5bb499c4-5ca7-4cd4-beb2-86156f328172
+          stepCounter: d3640933-b4f0-4d6d-a051-23a25127d4e0
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8bd3bfd0-54d0-4631-acce-ff03505767cd
+                stepCounter: 35eca694-f09c-4541-9dc5-f3f59bbebd49
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_TRADES
+        join:
+          joinCondition: FROM {{ ref('WORK', 'STG_TRADES') }} "STG_TRADES"
+        name: MR_TRADES
+        noLinkRefs: []
+  name: MR_TRADES
+  overrideSQL: false
+  schema: ""
+  sqlType: "19"
+  type: sql
+  version: 1
+type: Node

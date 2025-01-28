@@ -1,0 +1,81 @@
+fileVersion: 1
+id: 9d614afa-5def-4195-8e36-32f583329cbd
+name: STG_STOCK_PRICE_HISTORY_TRIAL
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 580f3dcf-e30c-42b8-a920-669da99bb848
+          stepCounter: 9d614afa-5def-4195-8e36-32f583329cbd
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 95e91820-8050-45ce-ab7b-39296c80d2b5
+                stepCounter: b5e01d57-49fe-4464-9e68-17dcbf34e325
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f46c7c9f-7a12-4302-a338-9649639c39ac
+          stepCounter: 9d614afa-5def-4195-8e36-32f583329cbd
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d17777da-7ca0-43ae-a7f4-adc1b209ce47
+                stepCounter: b5e01d57-49fe-4464-9e68-17dcbf34e325
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 44064d71-0070-492a-b163-e67d5b50bbca
+          stepCounter: 9d614afa-5def-4195-8e36-32f583329cbd
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e73f4a68-f20c-4e23-a052-6c179e309718
+                stepCounter: b5e01d57-49fe-4464-9e68-17dcbf34e325
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: STOCK_PRICE_HISTORY_TRIAL
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'STOCK_PRICE_HISTORY_TRIAL') }} "STOCK_PRICE_HISTORY_TRIAL"
+        name: STG_STOCK_PRICE_HISTORY_TRIAL
+        noLinkRefs: []
+  name: STG_STOCK_PRICE_HISTORY_TRIAL
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

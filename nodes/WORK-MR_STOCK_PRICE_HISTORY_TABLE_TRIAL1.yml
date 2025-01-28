@@ -1,0 +1,122 @@
+fileVersion: 1
+id: fd242ff4-15c9-4c24-b2f2-f1dcc156c565
+name: MR_STOCK_PRICE_HISTORY_TABLE_TRIAL1
+operation:
+  config:
+    afterMatchSkip: TO
+    allRowsPerMatch: OMIT EMPTY MATCHES
+    inferMatchRecognize: true
+    orderBy:
+      items:
+        - orderByCol:
+            columnCounter: f8cf249a-46f0-4306-b1da-41d8da4618b0
+            stepCounter: fd242ff4-15c9-4c24-b2f2-f1dcc156c565
+          orderByTextBox: null
+    partitionBy:
+      items:
+        - partitionByCol:
+            columnCounter: d49a42cf-c310-4ce8-87b6-c5ad3cf58bb5
+            stepCounter: fd242ff4-15c9-4c24-b2f2-f1dcc156c565
+          partitionByColTextBox: null
+    pattern: (row_before_decrease row_with_price_decrease+ row_with_price_increase+)
+    rowsPerMatch: ONE ROW PER MATCH
+    selectOrderBy:
+      items:
+        - selectOrderByCol:
+            columnCounter: d49a42cf-c310-4ce8-87b6-c5ad3cf58bb5
+            stepCounter: fd242ff4-15c9-4c24-b2f2-f1dcc156c565
+          selectOrderByTextBox: null
+        - selectOrderByCol:
+            columnCounter: f8cf249a-46f0-4306-b1da-41d8da4618b0
+            stepCounter: fd242ff4-15c9-4c24-b2f2-f1dcc156c565
+          selectOrderByTextBox: null
+    tabDefine:
+      items:
+        - valDefineColumnName: row_with_price_decrease
+          valDefineExpression: PRICE < LAG(PRICE)
+    tabMeasures:
+      items:
+        - valAliasExpressionColumnName: MATCH_NUMBER
+          valMeasureColumnName: null
+          valMeasureExpression: MATCH_NUMBER
+        - valAliasExpressionColumnName: START_DATE
+          valMeasureColumnName: PRICE_DATE
+          valMeasureExpression: FIRST
+    testsEnabled: false
+    to: LAST
+    toggleOrderBy: true
+    togglePartitionBy: true
+    toggleSelectOrderBy: true
+    truncateBefore: true
+    varAfterMatchSkip: row_with_price_increase
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d49a42cf-c310-4ce8-87b6-c5ad3cf58bb5
+          stepCounter: fd242ff4-15c9-4c24-b2f2-f1dcc156c565
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: COMPANY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a9c074ac-87ef-4079-98a7-811a4923237e
+                stepCounter: 08c50aea-bce0-410b-ba94-2304f7c2b980
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8cf249a-46f0-4306-b1da-41d8da4618b0
+          stepCounter: fd242ff4-15c9-4c24-b2f2-f1dcc156c565
+        config: {}
+        dataType: DATE
+        description: ""
+        name: PRICE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6245e63a-90b6-4705-81bc-d25924b9b760
+                stepCounter: 08c50aea-bce0-410b-ba94-2304f7c2b980
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e274d1d4-714d-4f31-bb6f-12f642c9531c
+          stepCounter: fd242ff4-15c9-4c24-b2f2-f1dcc156c565
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 15bb4581-513c-49bb-bec0-fd0bb88ffc60
+                stepCounter: 08c50aea-bce0-410b-ba94-2304f7c2b980
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_STOCK_PRICE_HISTORY
+        join:
+          joinCondition: FROM {{ ref('WORK', 'STG_STOCK_PRICE_HISTORY') }} "STG_STOCK_PRICE_HISTORY"
+        name: MR_STOCK_PRICE_HISTORY_TABLE_TRIAL1
+        noLinkRefs: []
+  name: MR_STOCK_PRICE_HISTORY_TABLE_TRIAL1
+  overrideSQL: false
+  schema: ""
+  sqlType: "19"
+  type: sql
+  version: 1
+type: Node
