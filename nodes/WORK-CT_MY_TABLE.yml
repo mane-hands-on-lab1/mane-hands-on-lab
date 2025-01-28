@@ -1,0 +1,89 @@
+fileVersion: 1
+id: 5930816c-1234-4520-963c-34b7da328349
+name: CT_MY_TABLE
+operation:
+  config:
+    changetracking: false
+    clusterKey: false
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: false
+    constraintsspec:
+      items:
+        - {}
+    datretention: <integer>
+    defaultcoallation: <collation specification>
+    eschemaevol: false
+    foreignk: false
+    foreignkeycon:
+      items:
+        - {}
+    inlineconst: false
+    maxdataretention: <integer>
+    outlineconst: false
+    primary: false
+    primarykeycon:
+      items:
+        - {}
+    primarykeyname: ""
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef1b12a5-5375-4d77-ac74-152e9f59ef1b
+          stepCounter: 5930816c-1234-4520-963c-34b7da328349
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: A
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 174baf52-a2c8-4759-9744-f4e072e7ed66
+                stepCounter: d871efcd-79fd-4846-8d86-3032c8d4b2a2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 85cd5aae-14c8-4b09-b8aa-efe4781dc294
+          stepCounter: 5930816c-1234-4520-963c-34b7da328349
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: B
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cf004b6d-6fc6-47df-a191-2deaac03e112
+                stepCounter: d871efcd-79fd-4846-8d86-3032c8d4b2a2
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_MY_TABLE
+        join:
+          joinCondition: FROM {{ ref('WORK', 'STG_MY_TABLE') }} "STG_MY_TABLE"
+        name: CT_MY_TABLE
+        noLinkRefs: []
+  name: CT_MY_TABLE
+  overrideSQL: false
+  schema: ""
+  sqlType: "7"
+  type: sql
+  version: 1
+type: Node

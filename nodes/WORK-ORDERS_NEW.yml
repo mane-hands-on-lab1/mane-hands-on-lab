@@ -1,0 +1,115 @@
+fileVersion: 1
+id: 1636b940-76e0-4326-9bcc-b1715a7662a7
+name: ORDERS_NEW
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: WORK
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 66286b43-4505-4f17-80d3-9db1104205d7
+          stepCounter: 1636b940-76e0-4326-9bcc-b1715a7662a7
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: ORDERID
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2920de3c-aa6c-4000-ba20-590b0bdd7eed
+          stepCounter: 1636b940-76e0-4326-9bcc-b1715a7662a7
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: CUSTOMERID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 526484da-6858-4d2f-8d90-da295849d911
+          stepCounter: 1636b940-76e0-4326-9bcc-b1715a7662a7
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: ORDERDATE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8efbc60f-fb41-45ce-9f6b-c7d0bd5dbb0a
+          stepCounter: 1636b940-76e0-4326-9bcc-b1715a7662a7
+        config: {}
+        dataType: NUMBER(10,2)
+        defaultValue: ""
+        description: ""
+        name: TOTALAMOUNT
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1dab4b8d-ad41-428f-8a13-fab7e805bc5a
+          stepCounter: 1636b940-76e0-4326-9bcc-b1715a7662a7
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: ORDERSTATUS
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('WORK', 'ORDERS_NEW') }}
+  name: ORDERS_NEW
+  schema: ""
+  sqlType: Source
+  table: ORDERS_NEW
+  type: sourceInput
+  version: 1
+type: Node

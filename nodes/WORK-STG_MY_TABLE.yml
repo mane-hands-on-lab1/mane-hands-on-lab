@@ -1,0 +1,67 @@
+fileVersion: 1
+id: d871efcd-79fd-4846-8d86-3032c8d4b2a2
+name: STG_MY_TABLE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 174baf52-a2c8-4759-9744-f4e072e7ed66
+          stepCounter: d871efcd-79fd-4846-8d86-3032c8d4b2a2
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: A
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fde4ea17-5dd9-44af-932d-40bd5505dfd7
+                stepCounter: a98e4289-9be3-40cf-954e-3d4d94d252c8
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cf004b6d-6fc6-47df-a191-2deaac03e112
+          stepCounter: d871efcd-79fd-4846-8d86-3032c8d4b2a2
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: B
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bc3d52c2-f493-4470-b13a-026fa0b6bdc2
+                stepCounter: a98e4289-9be3-40cf-954e-3d4d94d252c8
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: MY_TABLE
+        join:
+          joinCondition: FROM {{ ref('WORK', 'MY_TABLE') }} "MY_TABLE"
+        name: STG_MY_TABLE
+        noLinkRefs: []
+  name: STG_MY_TABLE
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

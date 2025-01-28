@@ -1,0 +1,187 @@
+fileVersion: 1
+id: 6c875ace-c742-4e1e-ae47-bc584a696861
+name: CT_CUSTOMER_NEW
+operation:
+  config:
+    changetracking: false
+    clusterKey: false
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: true
+    constraintsspec:
+      items:
+        - {}
+    datretention: ""
+    defaultcoallation: ""
+    eschemaevol: false
+    foreignk: false
+    foreignkeycon:
+      items:
+        - {}
+    inlineconst: false
+    maxdataretention: ""
+    outlineconst: false
+    primary: false
+    primarykeycon:
+      items:
+        - {}
+    primarykeyname: PK_1
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4c573727-9038-4de4-8f42-65f9a18ddf36
+          stepCounter: 6c875ace-c742-4e1e-ae47-bc584a696861
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMERID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9e66c236-e625-467d-8c52-c40290a16a7c
+                stepCounter: 0c8298d2-0e65-48dd-b1b7-c19439bb2612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 807e82b4-c37f-4427-9652-2afdf975f3c3
+          stepCounter: 6c875ace-c742-4e1e-ae47-bc584a696861
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: FIRSTNAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 24ea3843-6046-4daf-a2c5-95a72786f73f
+                stepCounter: 0c8298d2-0e65-48dd-b1b7-c19439bb2612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 28e535a6-a434-44a9-b436-ae20ed483bb0
+          stepCounter: 6c875ace-c742-4e1e-ae47-bc584a696861
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: LASTNAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9dfe405c-c2a0-4676-aec9-1b2fee912961
+                stepCounter: 0c8298d2-0e65-48dd-b1b7-c19439bb2612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eda29879-0f1b-43f3-a717-fac7a526e94d
+          stepCounter: 6c875ace-c742-4e1e-ae47-bc584a696861
+        config: {}
+        dataType: VARCHAR(150)
+        description: ""
+        name: EMAIL
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5e281684-6006-4e2c-a45d-0ccd92c45b7b
+                stepCounter: 0c8298d2-0e65-48dd-b1b7-c19439bb2612
+            transform: SUBSTRING("STG_CUSTOMER_NEW"."EMAIL",1,5)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6e0bef6-9474-4eaf-b7ff-f0804babb0a7
+          stepCounter: 6c875ace-c742-4e1e-ae47-bc584a696861
+        config: {}
+        dataType: VARCHAR(15)
+        description: ""
+        name: PHONENUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7ee98052-833d-4235-84f6-bbc0a8d9c4ee
+                stepCounter: 0c8298d2-0e65-48dd-b1b7-c19439bb2612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 13df92c5-0778-4f1c-889a-5b3768e2f8d7
+          stepCounter: 6c875ace-c742-4e1e-ae47-bc584a696861
+        config: {}
+        dataType: VARCHAR(200)
+        description: ""
+        name: ADDRESS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fd1f75ec-742f-4a5f-b4bd-340b9caf52a9
+                stepCounter: 0c8298d2-0e65-48dd-b1b7-c19439bb2612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b032c131-42f4-482b-a635-a67d5d8ec4ba
+          stepCounter: 6c875ace-c742-4e1e-ae47-bc584a696861
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 006fb49c-d3af-4bbc-9056-5c1fc536f91e
+                stepCounter: 0c8298d2-0e65-48dd-b1b7-c19439bb2612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f44a22fc-42f5-4bf9-acf5-c323259a102a
+          stepCounter: 6c875ace-c742-4e1e-ae47-bc584a696861
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6e4f8793-ca5e-46b4-bd89-5b89812d0907
+                stepCounter: 0c8298d2-0e65-48dd-b1b7-c19439bb2612
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b06ebfe-d606-4733-ac9c-fc337af8df4e
+          stepCounter: 6c875ace-c742-4e1e-ae47-bc584a696861
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: CREATEDAT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 42eb97cb-e8de-4d77-843c-a7c6950216b5
+                stepCounter: 0c8298d2-0e65-48dd-b1b7-c19439bb2612
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_CUSTOMER_NEW
+        join:
+          joinCondition: FROM {{ ref('WORK', 'STG_CUSTOMER_NEW') }} "STG_CUSTOMER_NEW"
+        name: CT_CUSTOMER_NEW
+        noLinkRefs: []
+  name: CT_CUSTOMER_NEW
+  overrideSQL: false
+  schema: ""
+  sqlType: "7"
+  type: sql
+  version: 1
+type: Node

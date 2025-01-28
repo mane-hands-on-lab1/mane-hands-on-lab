@@ -1,0 +1,81 @@
+fileVersion: 1
+id: 308dec02-37e0-4860-8d29-29ec10f3de19
+name: STG_QUARTERLY_SALES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 28144f6f-776c-49a5-b7b1-a943d02ce894
+          stepCounter: 308dec02-37e0-4860-8d29-29ec10f3de19
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EMPID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: da1394e0-13e4-46af-b804-bf0fc6873a2c
+                stepCounter: fc3388a2-6298-4bfd-a1da-50428718343d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8850ad0e-45a9-47dc-8e1a-f19317a7315d
+          stepCounter: 308dec02-37e0-4860-8d29-29ec10f3de19
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bca26ddb-b116-46f7-82f1-6681ca56cb67
+                stepCounter: fc3388a2-6298-4bfd-a1da-50428718343d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 44bf728e-012f-4f33-81c3-2f52354d9dcc
+          stepCounter: 308dec02-37e0-4860-8d29-29ec10f3de19
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: QUARTER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a9ef9a0c-a98c-4be0-be48-42ebe9b13843
+                stepCounter: fc3388a2-6298-4bfd-a1da-50428718343d
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: QUARTERLY_SALES
+        join:
+          joinCondition: FROM {{ ref('WORK', 'QUARTERLY_SALES') }} "QUARTERLY_SALES"
+        name: STG_QUARTERLY_SALES
+        noLinkRefs: []
+  name: STG_QUARTERLY_SALES
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

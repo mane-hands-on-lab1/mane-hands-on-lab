@@ -1,0 +1,88 @@
+fileVersion: 1
+id: 181a7e08-106b-4e4b-95dd-c84c1623a601
+name: PVT_QUARTERLY_SALES
+operation:
+  config:
+    Colvol: ""
+    aggfunc:
+      items:
+        - {}
+    defaultval: ""
+    defvalue: true
+    filcolvol: true
+    keyCol: null
+    subquery: false
+    subqueryval: ""
+    truncateBefore: true
+    valCol: null
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d655eb7-f6fc-4d09-9f98-5f3debfd29a1
+          stepCounter: 181a7e08-106b-4e4b-95dd-c84c1623a601
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EMPID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 28144f6f-776c-49a5-b7b1-a943d02ce894
+                stepCounter: 308dec02-37e0-4860-8d29-29ec10f3de19
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ab2ee685-3a0d-4a67-8a99-01d29d8d2ef9
+          stepCounter: 181a7e08-106b-4e4b-95dd-c84c1623a601
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8850ad0e-45a9-47dc-8e1a-f19317a7315d
+                stepCounter: 308dec02-37e0-4860-8d29-29ec10f3de19
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a4161b2d-384a-4f53-9af4-07b0ff94b7f7
+          stepCounter: 181a7e08-106b-4e4b-95dd-c84c1623a601
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: QUARTER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 44bf728e-012f-4f33-81c3-2f52354d9dcc
+                stepCounter: 308dec02-37e0-4860-8d29-29ec10f3de19
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_QUARTERLY_SALES
+        join:
+          joinCondition: FROM {{ ref('WORK', 'STG_QUARTERLY_SALES') }} "STG_QUARTERLY_SALES"
+        name: PVT_QUARTERLY_SALES
+        noLinkRefs: []
+  name: PVT_QUARTERLY_SALES
+  overrideSQL: false
+  schema: ""
+  sqlType: "6"
+  type: sql
+  version: 1
+type: Node

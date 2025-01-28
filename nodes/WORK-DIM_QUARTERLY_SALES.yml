@@ -1,0 +1,198 @@
+fileVersion: 1
+id: 1309b1a2-d647-4aa0-97ae-a756a64611a7
+name: DIM_QUARTERLY_SALES
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b8279726-af15-455b-a755-f5865bfe8fa9
+          stepCounter: 1309b1a2-d647-4aa0-97ae-a756a64611a7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: DIM_QUARTERLY_SALES_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b76d7044-3339-4e2a-9781-3794c40d9bd5
+          stepCounter: 1309b1a2-d647-4aa0-97ae-a756a64611a7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EMPID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9d655eb7-f6fc-4d09-9f98-5f3debfd29a1
+                stepCounter: 181a7e08-106b-4e4b-95dd-c84c1623a601
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: add76906-cf54-4783-a35e-afc62dcd80ca
+          stepCounter: 1309b1a2-d647-4aa0-97ae-a756a64611a7
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ab2ee685-3a0d-4a67-8a99-01d29d8d2ef9
+                stepCounter: 181a7e08-106b-4e4b-95dd-c84c1623a601
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1511f11f-c1fe-43cf-95e5-13730aae629a
+          stepCounter: 1309b1a2-d647-4aa0-97ae-a756a64611a7
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: QUARTER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a4161b2d-384a-4f53-9af4-07b0ff94b7f7
+                stepCounter: 181a7e08-106b-4e4b-95dd-c84c1623a601
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b15c93d8-dc79-43bb-a8c3-fd0b489975fb
+          stepCounter: 1309b1a2-d647-4aa0-97ae-a756a64611a7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSystemVersion: true
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47004d28-19ba-428a-b282-2a02e145a8f6
+          stepCounter: 1309b1a2-d647-4aa0-97ae-a756a64611a7
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isSystemCurrentFlag: true
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ee0cc35b-0586-4ef1-8497-d02345c6d51d
+          stepCounter: 1309b1a2-d647-4aa0-97ae-a756a64611a7
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemStartDate: true
+        name: SYSTEM_START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c148fea7-54b2-420d-961e-c01b3cf8ff88
+          stepCounter: 1309b1a2-d647-4aa0-97ae-a756a64611a7
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemEndDate: true
+        name: SYSTEM_END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a55a5c5d-19da-487e-a40e-832e124abe39
+          stepCounter: 1309b1a2-d647-4aa0-97ae-a756a64611a7
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d13b825-32d5-482e-b7b5-c6499e2ea4fc
+          stepCounter: 1309b1a2-d647-4aa0-97ae-a756a64611a7
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: PVT_QUARTERLY_SALES
+        join:
+          joinCondition: FROM {{ ref('WORK', 'PVT_QUARTERLY_SALES') }} "PVT_QUARTERLY_SALES"
+        name: DIM_QUARTERLY_SALES
+        noLinkRefs: []
+  name: DIM_QUARTERLY_SALES
+  overrideSQL: false
+  schema: ""
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node

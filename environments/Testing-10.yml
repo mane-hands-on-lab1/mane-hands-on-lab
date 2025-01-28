@@ -1,11 +1,14 @@
 fileVersion: 1
 id: "10"
 mappingDefinitions:
+  SOURCE:
+    database: ""
+    schema: ""
   SRC:
     database: SNOWFLAKE_SAMPLE_DATA
     schema: TPCH_SF1
   WORK:
-    database: MANE
+    database: MANE01
     schema: WORKTEST
 name: Testing
 type: Environment

@@ -1,6 +1,6 @@
 fileVersion: 1
 id: 999b1e03-46c1-46b5-80cc-1bb946ea1feb
-name: V_SUPPLIER
+name: VIEW_SUPPLIER
 operation:
   config:
     insertStrategy: UNION
@@ -257,9 +257,9 @@ operation:
             nodeName: DIM_SUPPLIER
         join:
           joinCondition: FROM {{ ref('WORK', 'DIM_SUPPLIER') }} "DIM_SUPPLIER"
-        name: V_SUPPLIER
+        name: VIEW_SUPPLIER
         noLinkRefs: []
-  name: V_SUPPLIER
+  name: VIEW_SUPPLIER
   overrideSQL: true
   schema: ""
   sqlType: View

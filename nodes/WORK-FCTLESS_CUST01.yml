@@ -290,19 +290,13 @@ operation:
     sourceMapping:
       - aliases:
           DIM_CUSTOMER: e5c4169a-c2dd-46ca-87e6-aef7aba48cd6
-          DIM_SUPPLIER: 6814f6ca-493a-49f8-b0a5-80f25ea64467
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: WORK
             nodeName: DIM_CUSTOMER
-          - locationName: WORK
-            nodeName: DIM_SUPPLIER
         join:
-          joinCondition: |-
-            FROM {{ ref('WORK', 'DIM_CUSTOMER') }} "DIM_CUSTOMER"
-            INNER JOIN{{ref('WORK', 'DIM_SUPPLIER') }}"DIM_SUPPLIER"
-            ON "DIM_CUSTOMER"."C_CUSTKEY" = "DIM_SUPPLIER"."DIM_SUPPLIER_KEY"
+          joinCondition: FROM {{ ref('WORK', 'DIM_CUSTOMER') }} "DIM_CUSTOMER"
         name: FCTLESS_CUST01
         noLinkRefs: []
       - aliases:
