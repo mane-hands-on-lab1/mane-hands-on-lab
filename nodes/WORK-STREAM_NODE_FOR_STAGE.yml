@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 630f9f4f-843e-4d96-8a92-ac0815a3d5ba
+id: 20214898-37cd-4f7e-ac60-dc107af25c88
 name: STREAM_NODE_FOR_STAGE
 operation:
   config:
@@ -21,8 +21,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 53a82bb5-f2ac-4238-abfc-38146f854cf4
-          stepCounter: 630f9f4f-843e-4d96-8a92-ac0815a3d5ba
+          columnCounter: c0c58e82-269f-41cd-b9e1-ba6ee6ec1fa2
+          stepCounter: 20214898-37cd-4f7e-ac60-dc107af25c88
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -38,8 +38,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 7867cc74-fdbd-4902-8412-68deb10ca63a
-          stepCounter: 630f9f4f-843e-4d96-8a92-ac0815a3d5ba
+          columnCounter: 72f6235a-104f-4c85-ac4c-04b913bad072
+          stepCounter: 20214898-37cd-4f7e-ac60-dc107af25c88
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -55,8 +55,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 6d7def5f-3db1-4c11-afc4-f0d5fd3debba
-          stepCounter: 630f9f4f-843e-4d96-8a92-ac0815a3d5ba
+          columnCounter: 6c1f7938-c9f5-4a2a-bf45-c28f28948c9e
+          stepCounter: 20214898-37cd-4f7e-ac60-dc107af25c88
         config: {}
         dataType: TIMESTAMP_TZ(3)
         defaultValue: ""
@@ -72,8 +72,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f46a6977-327d-4a47-b1ac-75dc9982350e
-          stepCounter: 630f9f4f-843e-4d96-8a92-ac0815a3d5ba
+          columnCounter: 43283b90-9131-49a5-a31a-3429dbc59d4c
+          stepCounter: 20214898-37cd-4f7e-ac60-dc107af25c88
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -89,8 +89,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: afa8b5be-03b8-4fbe-abae-e207f4e04f52
-          stepCounter: 630f9f4f-843e-4d96-8a92-ac0815a3d5ba
+          columnCounter: 7b40c62f-af93-4bdd-ae30-db490f20703c
+          stepCounter: 20214898-37cd-4f7e-ac60-dc107af25c88
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -106,8 +106,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: a60ec133-3da9-4569-b899-e8525aa019fc
-          stepCounter: 630f9f4f-843e-4d96-8a92-ac0815a3d5ba
+          columnCounter: 512992df-6aec-4951-9667-80ba78e02623
+          stepCounter: 20214898-37cd-4f7e-ac60-dc107af25c88
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -123,8 +123,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 05ffb671-9fe9-4478-adb8-5774f4f5d058
-          stepCounter: 630f9f4f-843e-4d96-8a92-ac0815a3d5ba
+          columnCounter: 8a06d9dd-d42c-4b13-8909-43ab5089f044
+          stepCounter: 20214898-37cd-4f7e-ac60-dc107af25c88
         config: {}
         dataType: VARCHAR(1)
         defaultValue: ""
@@ -140,8 +140,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: da0fae5d-2c85-4640-93ec-9865292fc7c1
-          stepCounter: 630f9f4f-843e-4d96-8a92-ac0815a3d5ba
+          columnCounter: 2be3c341-d1c5-4382-ab2c-c9ad402d9004
+          stepCounter: 20214898-37cd-4f7e-ac60-dc107af25c88
         config: {}
         dataType: BOOLEAN
         defaultValue: ""
@@ -157,8 +157,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 51b0b2a0-8c2d-46f1-b6b5-165fd23df71d
-          stepCounter: 630f9f4f-843e-4d96-8a92-ac0815a3d5ba
+          columnCounter: 20c0ae4f-0fc1-4e90-960b-c8192d18aefb
+          stepCounter: 20214898-37cd-4f7e-ac60-dc107af25c88
         config: {}
         dataType: VARCHAR(1)
         defaultValue: ""
