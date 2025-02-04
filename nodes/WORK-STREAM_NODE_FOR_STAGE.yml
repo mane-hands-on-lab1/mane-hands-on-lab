@@ -5,7 +5,7 @@ operation:
   config:
     redeploymentBehavior: Create or Replace
     sourceType: Directory Table
-    stageName: STAGE_FOR_DIRECTORY_TABLE1
+    stageName: STAGE_FOR_DIRECTORY_TABLE
     storageLocation: SOURCE
   database: ""
   deployEnabled: true
