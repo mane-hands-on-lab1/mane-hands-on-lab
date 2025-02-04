@@ -1,0 +1,96 @@
+fileVersion: 1
+id: db572663-2e61-4c72-82a5-a5d143cba1ca
+name: LEFT_TABLE
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9c8b98d1-4957-413a-9ee0-a3432cd880ce
+          stepCounter: db572663-2e61-4c72-82a5-a5d143cba1ca
+        config: {}
+        dataType: VARCHAR(1)
+        defaultValue: ""
+        description: ""
+        name: LC1
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e6015c9a-d386-47a3-aab1-4749d921aaf2
+          stepCounter: db572663-2e61-4c72-82a5-a5d143cba1ca
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: LC2
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 610efdc1-dfc8-4f32-94f9-91d7c2efd9b8
+          stepCounter: db572663-2e61-4c72-82a5-a5d143cba1ca
+        config: {}
+        dataType: TIME(9)
+        defaultValue: ""
+        description: ""
+        name: LC3
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1e159109-7872-40da-b219-7cda1c721e3e
+          stepCounter: db572663-2e61-4c72-82a5-a5d143cba1ca
+        config: {}
+        dataType: NUMBER(3,2)
+        defaultValue: ""
+        description: ""
+        name: LC4
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'LEFT_TABLE') }}
+  name: LEFT_TABLE
+  schema: ""
+  sqlType: Source
+  table: LEFT_TABLE
+  type: sourceInput
+  version: 1
+type: Node

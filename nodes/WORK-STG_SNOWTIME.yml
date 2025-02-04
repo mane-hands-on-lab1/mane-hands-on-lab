@@ -1,0 +1,95 @@
+fileVersion: 1
+id: 3d52ba4e-9a03-4b59-86b9-fd95c2497250
+name: STG_SNOWTIME
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43c5e7af-2708-4081-b730-95eeff4aa101
+          stepCounter: 3d52ba4e-9a03-4b59-86b9-fd95c2497250
+        config: {}
+        dataType: TIME(9)
+        description: ""
+        name: S_OBSERVED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 567e13a2-5d6a-4519-9485-0b78232c2e5d
+                stepCounter: a2504226-bc41-4dd1-ab08-7e60798a76b2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8e84cce3-eaee-4f92-95d0-82b3296fba2d
+          stepCounter: 3d52ba4e-9a03-4b59-86b9-fd95c2497250
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: S_LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1e440d3b-9d96-419c-a981-539cc9932ecf
+                stepCounter: a2504226-bc41-4dd1-ab08-7e60798a76b2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ce1acd3c-1d71-4c89-8240-8ca3aded6e8a
+          stepCounter: 3d52ba4e-9a03-4b59-86b9-fd95c2497250
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: S_STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e4156a6c-5ee3-465d-af3f-6b0fbf68a9f8
+                stepCounter: a2504226-bc41-4dd1-ab08-7e60798a76b2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e3abc29-a579-42f9-8352-2e1a79c7c50c
+          stepCounter: 3d52ba4e-9a03-4b59-86b9-fd95c2497250
+        config: {}
+        dataType: NUMBER(5,2)
+        description: ""
+        name: S_OBSERVATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a4c9bef6-ec82-4d13-ae1c-27d2160c280a
+                stepCounter: a2504226-bc41-4dd1-ab08-7e60798a76b2
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: SNOWTIME
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'SNOWTIME') }} "SNOWTIME"
+        name: STG_SNOWTIME
+        noLinkRefs: []
+  name: STG_SNOWTIME
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,96 @@
+fileVersion: 1
+id: 8e9ceac1-a3ad-41eb-a0de-131e541729bf
+name: RAINTIME
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d10d551a-48f0-4bfa-b3b1-81d75778d3e6
+          stepCounter: 8e9ceac1-a3ad-41eb-a0de-131e541729bf
+        config: {}
+        dataType: TIME(9)
+        defaultValue: ""
+        description: ""
+        name: R_OBSERVED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c3463db0-63e7-440d-ba1f-895cda5e53ae
+          stepCounter: 8e9ceac1-a3ad-41eb-a0de-131e541729bf
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: R_LOCATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e0a03f9-1e72-4ae2-8ceb-fd1f418dcdb9
+          stepCounter: 8e9ceac1-a3ad-41eb-a0de-131e541729bf
+        config: {}
+        dataType: VARCHAR(2)
+        defaultValue: ""
+        description: ""
+        name: R_STATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7992db4e-2b5c-42a4-8c09-cfeaf3bf0e83
+          stepCounter: 8e9ceac1-a3ad-41eb-a0de-131e541729bf
+        config: {}
+        dataType: NUMBER(5,2)
+        defaultValue: ""
+        description: ""
+        name: R_OBSERVATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'RAINTIME') }}
+  name: RAINTIME
+  schema: ""
+  sqlType: Source
+  table: RAINTIME
+  type: sourceInput
+  version: 1
+type: Node

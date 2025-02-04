@@ -1,0 +1,67 @@
+fileVersion: 1
+id: 6668ff6d-a2b7-4202-b9b9-0f39d006a9da
+name: STG_COMPANIES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2032346-64c7-44f2-bff3-5856ecccf0ae
+          stepCounter: 6668ff6d-a2b7-4202-b9b9-0f39d006a9da
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: C_STOCK_SYMBOL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8330c37e-1a7e-40e1-8190-537c864e19f8
+                stepCounter: d3eb76f9-8b9c-4d78-a7ea-dff87d611b55
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2073fa2-76ec-4f51-a2b2-40dc6f683402
+          stepCounter: 6668ff6d-a2b7-4202-b9b9-0f39d006a9da
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: COMPANY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c223a8a7-39f9-44b9-9420-b50d4ff73a84
+                stepCounter: d3eb76f9-8b9c-4d78-a7ea-dff87d611b55
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: COMPANIES
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'COMPANIES') }} "COMPANIES"
+        name: STG_COMPANIES
+        noLinkRefs: []
+  name: STG_COMPANIES
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

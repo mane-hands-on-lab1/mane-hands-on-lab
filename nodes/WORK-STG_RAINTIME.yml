@@ -1,0 +1,95 @@
+fileVersion: 1
+id: 3c82ef16-f296-49ba-921e-12d865c6aecc
+name: STG_RAINTIME
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef99b706-8e36-48b9-870a-a45d95d5bec3
+          stepCounter: 3c82ef16-f296-49ba-921e-12d865c6aecc
+        config: {}
+        dataType: TIME(9)
+        description: ""
+        name: R_OBSERVED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d10d551a-48f0-4bfa-b3b1-81d75778d3e6
+                stepCounter: 8e9ceac1-a3ad-41eb-a0de-131e541729bf
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c432988f-82b2-4bb3-b9f0-0fe36fce1b5f
+          stepCounter: 3c82ef16-f296-49ba-921e-12d865c6aecc
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: R_LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c3463db0-63e7-440d-ba1f-895cda5e53ae
+                stepCounter: 8e9ceac1-a3ad-41eb-a0de-131e541729bf
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 48164065-702a-4cf0-9e48-e7a293b2925c
+          stepCounter: 3c82ef16-f296-49ba-921e-12d865c6aecc
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: R_STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9e0a03f9-1e72-4ae2-8ceb-fd1f418dcdb9
+                stepCounter: 8e9ceac1-a3ad-41eb-a0de-131e541729bf
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7bd75f27-537d-44a0-89c2-6c0faffbcb9f
+          stepCounter: 3c82ef16-f296-49ba-921e-12d865c6aecc
+        config: {}
+        dataType: NUMBER(5,2)
+        description: ""
+        name: R_OBSERVATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7992db4e-2b5c-42a4-8c09-cfeaf3bf0e83
+                stepCounter: 8e9ceac1-a3ad-41eb-a0de-131e541729bf
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: RAINTIME
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'RAINTIME') }} "RAINTIME"
+        name: STG_RAINTIME
+        noLinkRefs: []
+  name: STG_RAINTIME
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

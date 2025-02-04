@@ -1,0 +1,95 @@
+fileVersion: 1
+id: baa4aac0-e2a2-4359-8e59-e795f844929f
+name: STG_PRECIPTIME
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ea5da0a0-99fa-4e1d-bb5b-86ee85fa0c3e
+          stepCounter: baa4aac0-e2a2-4359-8e59-e795f844929f
+        config: {}
+        dataType: TIME(9)
+        description: ""
+        name: OBSERVED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8853a13e-b0b7-4a39-b8f2-a59fb41a298e
+                stepCounter: 0ef91550-59b3-4b03-86df-cf1ede3048fe
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 483399d6-b883-4971-ab5e-cd8884d97901
+          stepCounter: baa4aac0-e2a2-4359-8e59-e795f844929f
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 087bae70-ee40-4006-9407-8a4b421b2b6d
+                stepCounter: 0ef91550-59b3-4b03-86df-cf1ede3048fe
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6322909-5fab-4f48-92dd-31066ac2854e
+          stepCounter: baa4aac0-e2a2-4359-8e59-e795f844929f
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b6d01ccd-a469-47e4-a95f-5529220082d3
+                stepCounter: 0ef91550-59b3-4b03-86df-cf1ede3048fe
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d048e7b8-dd41-4db0-b595-11908d3f0cb5
+          stepCounter: baa4aac0-e2a2-4359-8e59-e795f844929f
+        config: {}
+        dataType: NUMBER(5,2)
+        description: ""
+        name: OBSERVATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 19034138-5aa9-4f75-937c-e3c1d11616c1
+                stepCounter: 0ef91550-59b3-4b03-86df-cf1ede3048fe
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: PRECIPTIME
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'PRECIPTIME') }} "PRECIPTIME"
+        name: STG_PRECIPTIME
+        noLinkRefs: []
+  name: STG_PRECIPTIME
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

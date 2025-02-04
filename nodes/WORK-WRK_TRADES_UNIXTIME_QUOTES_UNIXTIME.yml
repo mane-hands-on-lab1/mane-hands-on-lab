@@ -1,0 +1,196 @@
+fileVersion: 1
+id: acfd67a7-d198-4ad0-a96e-cc72aaec6327
+name: WRK_TRADES_UNIXTIME_QUOTES_UNIXTIME
+operation:
+  config:
+    asofColumn:
+      items:
+        - {}
+    asofJoin: true
+    asofJoinMain: true
+    asofJoinON: false
+    asofJoinUSING: false
+    clusterKey: false
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: false
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3cf267a5-916a-493f-90c1-0f7280448d06
+          stepCounter: acfd67a7-d198-4ad0-a96e-cc72aaec6327
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: T_STOCK_SYMBOL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 304382b9-adba-41d5-8463-192c5f905df8
+                stepCounter: 0dbf150f-2413-4d9c-a0c9-8db496cedce2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: aa51a6d1-b9fe-4846-9269-c6748a8ce616
+          stepCounter: acfd67a7-d198-4ad0-a96e-cc72aaec6327
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: TRADE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a6e7b82d-1a9e-4753-b93b-4df6955f9a31
+                stepCounter: 0dbf150f-2413-4d9c-a0c9-8db496cedce2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 85e9585f-340c-4b10-9338-3cd1bd000906
+          stepCounter: acfd67a7-d198-4ad0-a96e-cc72aaec6327
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: T_QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: db8a3822-0c31-41cb-a634-12ff7936dcd5
+                stepCounter: 0dbf150f-2413-4d9c-a0c9-8db496cedce2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 233f1ea8-8351-4f7f-9c78-2ae80685d159
+          stepCounter: acfd67a7-d198-4ad0-a96e-cc72aaec6327
+        config: {}
+        dataType: NUMBER(12,8)
+        description: ""
+        name: PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9d88ca2d-b784-40f3-b630-d23a1f3079f2
+                stepCounter: 0dbf150f-2413-4d9c-a0c9-8db496cedce2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b25670ad-82f7-4c30-9151-df60156f136d
+          stepCounter: acfd67a7-d198-4ad0-a96e-cc72aaec6327
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: Q_STOCK_SYMBOL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ea90d505-a4a3-4df9-8250-3fd9fac174f4
+                stepCounter: e80c1698-2ab9-4e84-bc39-76f29678d0c2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 531306a7-0e88-4679-b5ee-7aa6d99d998e
+          stepCounter: acfd67a7-d198-4ad0-a96e-cc72aaec6327
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUOTE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f35ab7d4-e24b-4313-ad24-072e21ab1bd8
+                stepCounter: e80c1698-2ab9-4e84-bc39-76f29678d0c2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e7d8142b-b833-4ddb-8b19-3ecde0494cbe
+          stepCounter: acfd67a7-d198-4ad0-a96e-cc72aaec6327
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b7b31322-bcd6-49d6-84b6-7767681877c8
+                stepCounter: e80c1698-2ab9-4e84-bc39-76f29678d0c2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4235a205-f43f-4543-82b9-d8870ee84aa7
+          stepCounter: acfd67a7-d198-4ad0-a96e-cc72aaec6327
+        config: {}
+        dataType: NUMBER(12,8)
+        description: ""
+        name: BID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 749d6daa-bdf2-499e-9f35-cc23647ba899
+                stepCounter: e80c1698-2ab9-4e84-bc39-76f29678d0c2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 60c18a6b-4522-493d-97eb-c6bc7e511e75
+          stepCounter: acfd67a7-d198-4ad0-a96e-cc72aaec6327
+        config: {}
+        dataType: NUMBER(12,8)
+        description: ""
+        name: ASK
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 701f1931-8c5f-4fc4-b8f2-e4430c8f0e4b
+                stepCounter: e80c1698-2ab9-4e84-bc39-76f29678d0c2
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_QUOTES_UNIXTIME: e80c1698-2ab9-4e84-bc39-76f29678d0c2
+          STG_TRADES_UNIXTIME: 0dbf150f-2413-4d9c-a0c9-8db496cedce2
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_QUOTES_UNIXTIME
+          - locationName: WORK
+            nodeName: STG_TRADES_UNIXTIME
+        join:
+          joinCondition: |-
+            
+            
+            
+               FROM  {{ ref('WORK', 'STG_TRADES_UNIXTIME') }} "STG_TRADES_UNIXTIME"
+               ASOF JOIN {{ ref('WORK', 'STG_QUOTES_UNIXTIME') }} "STG_QUOTES_UNIXTIME"
+               MATCH_CONDITION ( "STG_TRADES_UNIXTIME"."TRADE_TIME" >= "STG_QUOTES_UNIXTIME"."QUOTE_TIME" )
+        name: WRK_TRADES_UNIXTIME_QUOTES_UNIXTIME
+        noLinkRefs: []
+  name: WRK_TRADES_UNIXTIME_QUOTES_UNIXTIME
+  overrideSQL: false
+  schema: ""
+  sqlType: "27"
+  type: sql
+  version: 1
+type: Node

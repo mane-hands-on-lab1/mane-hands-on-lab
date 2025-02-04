@@ -1,0 +1,109 @@
+fileVersion: 1
+id: d3a0a2fe-3fdb-4042-911c-2c4f9f9e1a7c
+name: STG_NEW_RIGHT_TABLE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: da57ca9f-68bb-482e-a405-81198ff77f2c
+          stepCounter: d3a0a2fe-3fdb-4042-911c-2c4f9f9e1a7c
+        config: {}
+        dataType: VARCHAR(1)
+        description: ""
+        name: C1
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0b3c1043-45c5-4104-9e9e-42e3f9e31873
+                stepCounter: 6716b3aa-ca01-486f-9b51-721bad0ec67f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 790bdc87-d0d8-4b97-b550-fc60dacee1c5
+          stepCounter: d3a0a2fe-3fdb-4042-911c-2c4f9f9e1a7c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: C2
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4ca8e1da-7994-4005-892e-e7ce2825ca28
+                stepCounter: 6716b3aa-ca01-486f-9b51-721bad0ec67f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0ea0ac43-58ac-4844-bd00-c1b2c24b32b0
+          stepCounter: d3a0a2fe-3fdb-4042-911c-2c4f9f9e1a7c
+        config: {}
+        dataType: TIME(9)
+        description: ""
+        name: C3
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8fa3e34b-5e5a-4f73-980a-395d9a4c8acb
+                stepCounter: 6716b3aa-ca01-486f-9b51-721bad0ec67f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 118dda80-f1ca-4f3d-a825-4a5f59ff0ba2
+          stepCounter: d3a0a2fe-3fdb-4042-911c-2c4f9f9e1a7c
+        config: {}
+        dataType: NUMBER(3,2)
+        description: ""
+        name: C4
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a385bbf3-e8df-47b9-8e02-7e78117fae32
+                stepCounter: 6716b3aa-ca01-486f-9b51-721bad0ec67f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: edd945ec-fe76-4492-b5c0-5aa11b297e64
+          stepCounter: d3a0a2fe-3fdb-4042-911c-2c4f9f9e1a7c
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: RIGHT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7727ea58-1d8b-4856-bea3-1f16cfcddd00
+                stepCounter: 6716b3aa-ca01-486f-9b51-721bad0ec67f
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: NEW_RIGHT_TABLE
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'NEW_RIGHT_TABLE') }} "NEW_RIGHT_TABLE"
+        name: STG_NEW_RIGHT_TABLE
+        noLinkRefs: []
+  name: STG_NEW_RIGHT_TABLE
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

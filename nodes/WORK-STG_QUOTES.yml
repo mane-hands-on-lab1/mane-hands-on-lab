@@ -1,0 +1,81 @@
+fileVersion: 1
+id: d70f48d5-f29d-4837-a8fb-4ff5b509d5dc
+name: STG_QUOTES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 96c321a8-c5fa-4320-aab9-2de81ed62c66
+          stepCounter: d70f48d5-f29d-4837-a8fb-4ff5b509d5dc
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: STOCK_SYMBOL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aa12f402-52b4-4051-a8fd-7e3ff21017c9
+                stepCounter: 82364bb0-aaef-4caa-b112-addd45987099
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97d25a5d-f00b-4c6b-afed-5e1313a5aff2
+          stepCounter: d70f48d5-f29d-4837-a8fb-4ff5b509d5dc
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: QUOTE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 451f0c44-170a-447c-a89e-918d96c0cb1e
+                stepCounter: 82364bb0-aaef-4caa-b112-addd45987099
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b6afe52-2f00-431a-9cb1-6d27543ef892
+          stepCounter: d70f48d5-f29d-4837-a8fb-4ff5b509d5dc
+        config: {}
+        dataType: NUMBER(12,8)
+        description: ""
+        name: PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 60490a14-55cb-4dc9-a443-bb128bc5f20b
+                stepCounter: 82364bb0-aaef-4caa-b112-addd45987099
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: QUOTES
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'QUOTES') }} "QUOTES"
+        name: STG_QUOTES
+        noLinkRefs: []
+  name: STG_QUOTES
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

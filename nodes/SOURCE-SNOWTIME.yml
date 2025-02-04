@@ -1,0 +1,96 @@
+fileVersion: 1
+id: a2504226-bc41-4dd1-ab08-7e60798a76b2
+name: SNOWTIME
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 567e13a2-5d6a-4519-9485-0b78232c2e5d
+          stepCounter: a2504226-bc41-4dd1-ab08-7e60798a76b2
+        config: {}
+        dataType: TIME(9)
+        defaultValue: ""
+        description: ""
+        name: S_OBSERVED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1e440d3b-9d96-419c-a981-539cc9932ecf
+          stepCounter: a2504226-bc41-4dd1-ab08-7e60798a76b2
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: S_LOCATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e4156a6c-5ee3-465d-af3f-6b0fbf68a9f8
+          stepCounter: a2504226-bc41-4dd1-ab08-7e60798a76b2
+        config: {}
+        dataType: VARCHAR(2)
+        defaultValue: ""
+        description: ""
+        name: S_STATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a4c9bef6-ec82-4d13-ae1c-27d2160c280a
+          stepCounter: a2504226-bc41-4dd1-ab08-7e60798a76b2
+        config: {}
+        dataType: NUMBER(5,2)
+        defaultValue: ""
+        description: ""
+        name: S_OBSERVATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'SNOWTIME') }}
+  name: SNOWTIME
+  schema: ""
+  sqlType: Source
+  table: SNOWTIME
+  type: sourceInput
+  version: 1
+type: Node

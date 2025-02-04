@@ -1,0 +1,185 @@
+fileVersion: 1
+id: eea71709-ac0e-4b26-bd55-ebfa9134701e
+name: WRK_TRADES_QUOTES_COMPANIES
+operation:
+  config:
+    asofColumn:
+      items:
+        - {}
+    asofJoin: true
+    asofJoinMain: true
+    asofJoinON: false
+    asofJoinUSING: false
+    clusterKey: false
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: false
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bd72e97d-ebc1-4cbe-8c17-0b8544969935
+          stepCounter: eea71709-ac0e-4b26-bd55-ebfa9134701e
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: T_STOCK_SYMBOL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 07332ea5-18b7-4028-952e-8b12ffc444ca
+                stepCounter: 14223e09-3f42-4653-a136-66254452b0b9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3ac65d8a-d8b9-4fdc-b2fa-f61022710a3f
+          stepCounter: eea71709-ac0e-4b26-bd55-ebfa9134701e
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: TRADE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 52d0a7dd-d568-4dd2-81a0-b393ea5d424c
+                stepCounter: 14223e09-3f42-4653-a136-66254452b0b9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa1afdb5-7193-4007-a6fd-60f77591976d
+          stepCounter: eea71709-ac0e-4b26-bd55-ebfa9134701e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7ddcfefb-2074-4617-974f-6bcd16310329
+                stepCounter: 14223e09-3f42-4653-a136-66254452b0b9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 673018d0-1d17-4f19-b328-a40bda658a2c
+          stepCounter: eea71709-ac0e-4b26-bd55-ebfa9134701e
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: STOCK_SYMBOL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 96c321a8-c5fa-4320-aab9-2de81ed62c66
+                stepCounter: d70f48d5-f29d-4837-a8fb-4ff5b509d5dc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6ca6418c-9403-4743-a6b9-0f36684d8f54
+          stepCounter: eea71709-ac0e-4b26-bd55-ebfa9134701e
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: QUOTE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 97d25a5d-f00b-4c6b-afed-5e1313a5aff2
+                stepCounter: d70f48d5-f29d-4837-a8fb-4ff5b509d5dc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cfff4ebc-cfa0-4f1a-9944-f0795d038a98
+          stepCounter: eea71709-ac0e-4b26-bd55-ebfa9134701e
+        config: {}
+        dataType: NUMBER(12,8)
+        description: ""
+        name: PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5b6afe52-2f00-431a-9cb1-6d27543ef892
+                stepCounter: d70f48d5-f29d-4837-a8fb-4ff5b509d5dc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3c6df025-7f64-4024-8b15-dfff43e9a40c
+          stepCounter: eea71709-ac0e-4b26-bd55-ebfa9134701e
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: C_STOCK_SYMBOL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f2032346-64c7-44f2-bff3-5856ecccf0ae
+                stepCounter: 6668ff6d-a2b7-4202-b9b9-0f39d006a9da
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 044d4c96-bb9f-4048-834a-465ea91b99db
+          stepCounter: eea71709-ac0e-4b26-bd55-ebfa9134701e
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: COMPANY_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f2073fa2-76ec-4f51-a2b2-40dc6f683402
+                stepCounter: 6668ff6d-a2b7-4202-b9b9-0f39d006a9da
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_COMPANIES: 6668ff6d-a2b7-4202-b9b9-0f39d006a9da
+          STG_QUOTES: d70f48d5-f29d-4837-a8fb-4ff5b509d5dc
+          STG_TRADES: 14223e09-3f42-4653-a136-66254452b0b9
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_COMPANIES
+          - locationName: WORK
+            nodeName: STG_QUOTES
+          - locationName: WORK
+            nodeName: STG_TRADES
+        join:
+          joinCondition: |-
+            FROM{{ ref('WORK', 'STG_TRADES') }} "STG_TRADES"
+               ASOF JOIN {{ref('WORK','STG_QUOTES')}} "STG_QUOTES"
+                 MATCH_CONDITION ("STG_TRADES"."TRADE_TIME" >= "STG_QUOTES"."QUOTE_TIME" ) 
+                 ON  ("STG_TRADES"."T_STOCK_SYMBOL" = "STG_QUOTES"."STOCK_SYMBOL" )
+                INNER JOIN {{ ref('WORK', 'STG_COMPANIES') }} "STG_COMPANIES"
+                 ON ("STG_COMPANIES"."C_STOCK_SYMBOL" = "STG_TRADES"."T_STOCK_SYMBOL")
+        name: WRK_TRADES_QUOTES_COMPANIES
+        noLinkRefs: []
+  name: WRK_TRADES_QUOTES_COMPANIES
+  overrideSQL: false
+  schema: ""
+  sqlType: "27"
+  type: sql
+  version: 1
+type: Node

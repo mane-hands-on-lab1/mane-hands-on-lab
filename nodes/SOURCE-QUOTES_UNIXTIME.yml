@@ -1,0 +1,115 @@
+fileVersion: 1
+id: 722d78a0-ccaa-45b3-9603-49f6f6f3e37b
+name: QUOTES_UNIXTIME
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1ce3f377-5728-4092-8f66-72641ea7bf16
+          stepCounter: 722d78a0-ccaa-45b3-9603-49f6f6f3e37b
+        config: {}
+        dataType: VARCHAR(4)
+        defaultValue: ""
+        description: ""
+        name: Q_STOCK_SYMBOL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2bbe208-402f-448b-8c0c-3c34acf373b4
+          stepCounter: 722d78a0-ccaa-45b3-9603-49f6f6f3e37b
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: QUOTE_TIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e56997c5-301b-42c1-ac52-96f04253198a
+          stepCounter: 722d78a0-ccaa-45b3-9603-49f6f6f3e37b
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: QUANTITY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7aa36d2e-30b6-4b2d-b5c3-4527ff2acec3
+          stepCounter: 722d78a0-ccaa-45b3-9603-49f6f6f3e37b
+        config: {}
+        dataType: NUMBER(12,8)
+        defaultValue: ""
+        description: ""
+        name: BID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47817a07-1770-404d-a05a-ec47532a4404
+          stepCounter: 722d78a0-ccaa-45b3-9603-49f6f6f3e37b
+        config: {}
+        dataType: NUMBER(12,8)
+        defaultValue: ""
+        description: ""
+        name: ASK
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'QUOTES_UNIXTIME') }}
+  name: QUOTES_UNIXTIME
+  schema: ""
+  sqlType: Source
+  table: QUOTES_UNIXTIME
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,181 @@
+fileVersion: 1
+id: 9abef075-031e-4051-9b48-4c509413a119
+name: WRK_PRECIPTIME_SNOWTIME
+operation:
+  config:
+    asofColumn:
+      items:
+        - {}
+    asofJoin: true
+    asofJoinMain: true
+    asofJoinON: false
+    asofJoinUSING: false
+    clusterKey: false
+    clusterKeyConfig:
+      items:
+        - {}
+    clusterKeyConfigExpressions:
+      items:
+        - {}
+    clusterKeyExpressions: false
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9b36a4b7-3290-4d3e-ab28-eefa3ea52c86
+          stepCounter: 9abef075-031e-4051-9b48-4c509413a119
+        config: {}
+        dataType: TIME(9)
+        description: ""
+        name: OBSERVED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ea5da0a0-99fa-4e1d-bb5b-86ee85fa0c3e
+                stepCounter: baa4aac0-e2a2-4359-8e59-e795f844929f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f86935aa-6452-4ac9-85d9-f46ba6e9abbc
+          stepCounter: 9abef075-031e-4051-9b48-4c509413a119
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 483399d6-b883-4971-ab5e-cd8884d97901
+                stepCounter: baa4aac0-e2a2-4359-8e59-e795f844929f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f460d348-91e6-4fe2-81f1-8232018ea6d6
+          stepCounter: 9abef075-031e-4051-9b48-4c509413a119
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d6322909-5fab-4f48-92dd-31066ac2854e
+                stepCounter: baa4aac0-e2a2-4359-8e59-e795f844929f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ae70e1d7-9162-4e0d-9677-0c06665e1bae
+          stepCounter: 9abef075-031e-4051-9b48-4c509413a119
+        config: {}
+        dataType: NUMBER(5,2)
+        description: ""
+        name: OBSERVATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d048e7b8-dd41-4db0-b595-11908d3f0cb5
+                stepCounter: baa4aac0-e2a2-4359-8e59-e795f844929f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2acfc24c-c230-4e3e-9e6e-4ed226123380
+          stepCounter: 9abef075-031e-4051-9b48-4c509413a119
+        config: {}
+        dataType: TIME(9)
+        description: ""
+        name: S_OBSERVED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 43c5e7af-2708-4081-b730-95eeff4aa101
+                stepCounter: 3d52ba4e-9a03-4b59-86b9-fd95c2497250
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9b65a7a8-a219-429e-9450-11e69e1dd479
+          stepCounter: 9abef075-031e-4051-9b48-4c509413a119
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: S_LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e84cce3-eaee-4f92-95d0-82b3296fba2d
+                stepCounter: 3d52ba4e-9a03-4b59-86b9-fd95c2497250
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6981b6fa-49b5-478a-b669-308524a82ed3
+          stepCounter: 9abef075-031e-4051-9b48-4c509413a119
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: S_STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ce1acd3c-1d71-4c89-8240-8ca3aded6e8a
+                stepCounter: 3d52ba4e-9a03-4b59-86b9-fd95c2497250
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a3fed53-2f18-4a0d-a64c-3bc4914ba33e
+          stepCounter: 9abef075-031e-4051-9b48-4c509413a119
+        config: {}
+        dataType: NUMBER(5,2)
+        description: ""
+        name: S_OBSERVATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4e3abc29-a579-42f9-8352-2e1a79c7c50c
+                stepCounter: 3d52ba4e-9a03-4b59-86b9-fd95c2497250
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_PRECIPTIME: baa4aac0-e2a2-4359-8e59-e795f844929f
+          STG_SNOWTIME: 3d52ba4e-9a03-4b59-86b9-fd95c2497250
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: STG_PRECIPTIME
+          - locationName: WORK
+            nodeName: STG_SNOWTIME
+        join:
+          joinCondition: |-
+            
+            
+               FROM  {{ ref('WORK', 'STG_PRECIPTIME') }} "STG_PRECIPTIME"
+               ASOF JOIN {{ ref('WORK', 'STG_SNOWTIME') }} "STG_SNOWTIME"
+               MATCH_CONDITION ("STG_PRECIPTIME"."OBSERVED" >= "STG_SNOWTIME"."S_OBSERVED" )
+        name: WRK_PRECIPTIME_SNOWTIME
+        noLinkRefs: []
+  name: WRK_PRECIPTIME_SNOWTIME
+  overrideSQL: false
+  schema: ""
+  sqlType: "27"
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,58 @@
+fileVersion: 1
+id: d3eb76f9-8b9c-4d78-a7ea-dff87d611b55
+name: COMPANIES
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8330c37e-1a7e-40e1-8190-537c864e19f8
+          stepCounter: d3eb76f9-8b9c-4d78-a7ea-dff87d611b55
+        config: {}
+        dataType: VARCHAR(4)
+        defaultValue: ""
+        description: ""
+        name: C_STOCK_SYMBOL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c223a8a7-39f9-44b9-9420-b50d4ff73a84
+          stepCounter: d3eb76f9-8b9c-4d78-a7ea-dff87d611b55
+        config: {}
+        dataType: VARCHAR(100)
+        defaultValue: ""
+        description: ""
+        name: COMPANY_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'COMPANIES') }}
+  name: COMPANIES
+  schema: ""
+  sqlType: Source
+  table: COMPANIES
+  type: sourceInput
+  version: 1
+type: Node
