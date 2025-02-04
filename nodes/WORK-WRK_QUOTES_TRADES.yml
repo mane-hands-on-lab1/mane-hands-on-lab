@@ -1,0 +1,147 @@
+fileVersion: 1
+id: e55dd6ff-b684-4c57-a79f-75ad35f6fe4e
+name: WRK_QUOTES_TRADES
+operation:
+  config:
+    asofColumn:
+      items:
+        - matchCondition: TRADES.TRADE_TIME <= QUOTES.QUOTE_TIME
+          rightTable: QUOTES
+          rightTableSL: SOURCE
+          usingColumnName: STOCK_SYMBOL
+    asofJoin: true
+    asofJoinMain: true
+    asofJoinON: false
+    asofJoinUSING: true
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ed15a59c-5b98-4fd5-ab6a-cdde9dfdcdb6
+          stepCounter: e55dd6ff-b684-4c57-a79f-75ad35f6fe4e
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: T_STOCK_SYMBOL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 66d31a23-086c-472c-99d0-a97719f1e7ba
+                stepCounter: 3bffd85e-39c6-40bf-b384-574374394da5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 54eee9f1-c9fb-42c8-b4fa-7c8ba6857657
+          stepCounter: e55dd6ff-b684-4c57-a79f-75ad35f6fe4e
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: QUOTE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 58474fe5-1c04-4c87-82e9-803651eeaa4e
+                stepCounter: 3bffd85e-39c6-40bf-b384-574374394da5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97fc5555-7af6-482a-a6fc-d7fe58044fb5
+          stepCounter: e55dd6ff-b684-4c57-a79f-75ad35f6fe4e
+        config: {}
+        dataType: NUMBER(12,8)
+        description: ""
+        name: PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6fc444bf-7cdb-4f39-882f-bf97d8b0ba4f
+                stepCounter: 3bffd85e-39c6-40bf-b384-574374394da5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6cc02904-2a25-4e76-9a55-1dbd06f723ac
+          stepCounter: e55dd6ff-b684-4c57-a79f-75ad35f6fe4e
+        config: {}
+        dataType: VARCHAR(4)
+        description: ""
+        name: STOCK_SYMBOL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 91d50f3b-22fc-4d7c-aaef-d6616d09fbe5
+                stepCounter: 0cb0ed2b-8a76-4833-8cd9-2d47daa05a56
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 869cc701-d999-4558-8734-fe64219db374
+          stepCounter: e55dd6ff-b684-4c57-a79f-75ad35f6fe4e
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: TRADE_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ad950e0d-6e77-4908-a258-3cdcb87924a2
+                stepCounter: 0cb0ed2b-8a76-4833-8cd9-2d47daa05a56
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a13f550-e52e-4d47-9490-f24a528173a8
+          stepCounter: e55dd6ff-b684-4c57-a79f-75ad35f6fe4e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7450da00-dbf8-498d-adc6-d6079f4e39f3
+                stepCounter: 0cb0ed2b-8a76-4833-8cd9-2d47daa05a56
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          QUOTES: 3bffd85e-39c6-40bf-b384-574374394da5
+          TRADES: 0cb0ed2b-8a76-4833-8cd9-2d47daa05a56
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: QUOTES
+          - locationName: SOURCE
+            nodeName: TRADES
+        join:
+          joinCondition: |2-
+              FROM  {{ ref('SOURCE', 'TRADES') }} "TRADES"
+               ASOF JOIN {{ ref('SOURCE', 'QUOTES') }} "QUOTES"
+               MATCH_CONDITION (TRADES.TRADE_TIME <= QUOTES.QUOTE_TIME ) 
+               ON  (TRADES.STOCK_SYMBOL = QUOTES.STOCK_SYMBOL )
+        name: WRK_QUOTES_TRADES
+        noLinkRefs: []
+  name: WRK_QUOTES_TRADES
+  overrideSQL: false
+  schema: ""
+  sqlType: "28"
+  type: sql
+  version: 1
+type: Node

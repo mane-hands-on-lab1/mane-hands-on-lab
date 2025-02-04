@@ -1,0 +1,96 @@
+fileVersion: 1
+id: 815cce9c-a21f-41aa-8317-6a492382a6b0
+name: RAINTIME
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ff40a902-18d1-45f6-8853-aef5d2540f8e
+          stepCounter: 815cce9c-a21f-41aa-8317-6a492382a6b0
+        config: {}
+        dataType: TIME(9)
+        defaultValue: ""
+        description: ""
+        name: OBSERVED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: baae9713-a597-42d0-88db-6a4205ec8ca8
+          stepCounter: 815cce9c-a21f-41aa-8317-6a492382a6b0
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: LOCATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2317f4f-59e4-4ddd-8e25-9d72f1e17a79
+          stepCounter: 815cce9c-a21f-41aa-8317-6a492382a6b0
+        config: {}
+        dataType: VARCHAR(2)
+        defaultValue: ""
+        description: ""
+        name: STATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fb2ae00b-2eec-409b-bcf7-f69f94cf05d6
+          stepCounter: 815cce9c-a21f-41aa-8317-6a492382a6b0
+        config: {}
+        dataType: NUMBER(5,2)
+        defaultValue: ""
+        description: ""
+        name: OBSERVATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'RAINTIME') }}
+  name: RAINTIME
+  schema: ""
+  sqlType: Source
+  table: RAINTIME
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,96 @@
+fileVersion: 1
+id: 33a332ab-7405-4db4-8961-a81c75c3a7bd
+name: PRECIPTIME
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 62c85fbb-c36b-465c-8f44-32f5fdb02cf9
+          stepCounter: 33a332ab-7405-4db4-8961-a81c75c3a7bd
+        config: {}
+        dataType: TIME(9)
+        defaultValue: ""
+        description: ""
+        name: OBSERVED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e07901ff-265c-4d61-a288-32dc70240bec
+          stepCounter: 33a332ab-7405-4db4-8961-a81c75c3a7bd
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: LOCATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c6648f75-e1cb-437a-b855-6c65e111c180
+          stepCounter: 33a332ab-7405-4db4-8961-a81c75c3a7bd
+        config: {}
+        dataType: VARCHAR(2)
+        defaultValue: ""
+        description: ""
+        name: STATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 218e33c4-39fd-4c3b-8ec3-a6dee4ff46f4
+          stepCounter: 33a332ab-7405-4db4-8961-a81c75c3a7bd
+        config: {}
+        dataType: NUMBER(5,2)
+        defaultValue: ""
+        description: ""
+        name: OBSERVATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'PRECIPTIME') }}
+  name: PRECIPTIME
+  schema: ""
+  sqlType: Source
+  table: PRECIPTIME
+  type: sourceInput
+  version: 1
+type: Node

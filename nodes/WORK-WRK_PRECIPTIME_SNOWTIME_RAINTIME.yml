@@ -1,0 +1,188 @@
+fileVersion: 1
+id: 23c53c5d-927b-4626-a2af-572eb4eff6ce
+name: WRK_PRECIPTIME_SNOWTIME_RAINTIME
+operation:
+  config:
+    asofColumn:
+      items:
+        - matchCondition: SNOWTIME.OBSERVED >= RAINTIME.OBSERVED
+          onCondition: SNOWTIME.STATE = RAINTIME.STATE
+          rightTable: RAINTIME
+          rightTableSL: SOURCE
+        - matchCondition: SNOWTIME.OBSERVED >= PRECIPTIME.OBSERVED
+          onCondition: SNOWTIME.STATE = PRECIPTIMETIME.STATE
+          rightTable: PRECIPTIME
+          rightTableSL: SOURCE
+    asofJoin: true
+    asofJoinMain: true
+    asofJoinON: true
+    asofJoinUSING: false
+    groupByAll: false
+    insertStrategy: INSERT
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 708c68e7-43f3-497b-b1c9-8c839de29409
+          stepCounter: 23c53c5d-927b-4626-a2af-572eb4eff6ce
+        config: {}
+        dataType: TIME(9)
+        description: ""
+        name: P_OBSERVED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 62c85fbb-c36b-465c-8f44-32f5fdb02cf9
+                stepCounter: 33a332ab-7405-4db4-8961-a81c75c3a7bd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0070b8b9-b7c8-4e71-a617-34ad8feffc93
+          stepCounter: 23c53c5d-927b-4626-a2af-572eb4eff6ce
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: P_LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e07901ff-265c-4d61-a288-32dc70240bec
+                stepCounter: 33a332ab-7405-4db4-8961-a81c75c3a7bd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5f32f052-373c-4cdb-ab48-fbd4cf3833f5
+          stepCounter: 23c53c5d-927b-4626-a2af-572eb4eff6ce
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: P_STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c6648f75-e1cb-437a-b855-6c65e111c180
+                stepCounter: 33a332ab-7405-4db4-8961-a81c75c3a7bd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6588143b-c71d-4fc4-b1e3-cd6578a3b3df
+          stepCounter: 23c53c5d-927b-4626-a2af-572eb4eff6ce
+        config: {}
+        dataType: NUMBER(5,2)
+        description: ""
+        name: P_OBSERVATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 218e33c4-39fd-4c3b-8ec3-a6dee4ff46f4
+                stepCounter: 33a332ab-7405-4db4-8961-a81c75c3a7bd
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3f68d867-1ef1-4f4b-bdcb-dd375312122f
+          stepCounter: 23c53c5d-927b-4626-a2af-572eb4eff6ce
+        config: {}
+        dataType: TIME(9)
+        description: ""
+        name: OBSERVED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8b0ec888-5511-4b99-b777-695305ee16de
+                stepCounter: 3e85a9eb-95e4-43c8-835a-0fcf332a66a4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d179437d-6eb3-4cdc-8509-57f84e0352c3
+          stepCounter: 23c53c5d-927b-4626-a2af-572eb4eff6ce
+        config: {}
+        dataType: VARCHAR(40)
+        description: ""
+        name: LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 392f45d1-2251-46c1-963a-4bf01ced8723
+                stepCounter: 3e85a9eb-95e4-43c8-835a-0fcf332a66a4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 988d7437-f97a-49a5-9050-4378ed067e8c
+          stepCounter: 23c53c5d-927b-4626-a2af-572eb4eff6ce
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 04d11648-4969-4755-9729-f97423ec312d
+                stepCounter: 3e85a9eb-95e4-43c8-835a-0fcf332a66a4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d991ffba-ac0d-4f83-895c-4e43184b14a5
+          stepCounter: 23c53c5d-927b-4626-a2af-572eb4eff6ce
+        config: {}
+        dataType: NUMBER(5,2)
+        description: ""
+        name: OBSERVATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 56327ed3-1155-4471-afc6-a740f43c4921
+                stepCounter: 3e85a9eb-95e4-43c8-835a-0fcf332a66a4
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          PRECIPTIME: 33a332ab-7405-4db4-8961-a81c75c3a7bd
+          RAINTIME: 815cce9c-a21f-41aa-8317-6a492382a6b0
+          SNOWTIME: 3e85a9eb-95e4-43c8-835a-0fcf332a66a4
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SOURCE
+            nodeName: PRECIPTIME
+          - locationName: SOURCE
+            nodeName: RAINTIME
+          - locationName: SOURCE
+            nodeName: SNOWTIME
+        join:
+          joinCondition: |-
+            
+            
+            
+               FROM  {{ ref('SOURCE', 'SNOWTIME') }} "SNOWTIME"
+               ASOF JOIN {{ ref('SOURCE', 'RAINTIME') }} "RAINTIME"
+               MATCH_CONDITION (SNOWTIME.OBSERVED >= RAINTIME.OBSERVED ) 
+               ON  (SNOWTIME.STATE = RAINTIME.STATE )
+               ASOF JOIN {{ ref('SOURCE', 'PRECIPTIME') }} "PRECIPTIME"
+               MATCH_CONDITION (SNOWTIME.OBSERVED >= PRECIPTIME.OBSERVED ) 
+               ON  (SNOWTIME.STATE = PRECIPTIME.STATE )
+        name: WRK_PRECIPTIME_SNOWTIME_RAINTIME
+        noLinkRefs: []
+  name: WRK_PRECIPTIME_SNOWTIME_RAINTIME
+  overrideSQL: false
+  schema: ""
+  sqlType: "28"
+  type: sql
+  version: 1
+type: Node

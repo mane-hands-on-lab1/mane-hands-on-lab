@@ -1,0 +1,96 @@
+fileVersion: 1
+id: c2b74df1-fdb2-430e-94e6-93ababeb3574
+name: TRADES_UNIXTIME
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0aeb008-cb3c-4247-94bb-8a465665b164
+          stepCounter: c2b74df1-fdb2-430e-94e6-93ababeb3574
+        config: {}
+        dataType: VARCHAR(4)
+        defaultValue: ""
+        description: ""
+        name: STOCK_SYMBOL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ea71cef2-16e7-4ceb-a99b-4417bd1f0b3d
+          stepCounter: c2b74df1-fdb2-430e-94e6-93ababeb3574
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: TRADE_TIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d287592f-bbb2-4a38-9753-abdb6610bf0d
+          stepCounter: c2b74df1-fdb2-430e-94e6-93ababeb3574
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: QUANTITY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 61771446-b9ee-422f-a7a8-d8f9a1f5bd7e
+          stepCounter: c2b74df1-fdb2-430e-94e6-93ababeb3574
+        config: {}
+        dataType: NUMBER(12,8)
+        defaultValue: ""
+        description: ""
+        name: PRICE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'TRADES_UNIXTIME') }}
+  name: TRADES_UNIXTIME
+  schema: ""
+  sqlType: Source
+  table: TRADES_UNIXTIME
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,96 @@
+fileVersion: 1
+id: 3e85a9eb-95e4-43c8-835a-0fcf332a66a4
+name: SNOWTIME
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SOURCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b0ec888-5511-4b99-b777-695305ee16de
+          stepCounter: 3e85a9eb-95e4-43c8-835a-0fcf332a66a4
+        config: {}
+        dataType: TIME(9)
+        defaultValue: ""
+        description: ""
+        name: OBSERVED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 392f45d1-2251-46c1-963a-4bf01ced8723
+          stepCounter: 3e85a9eb-95e4-43c8-835a-0fcf332a66a4
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: LOCATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 04d11648-4969-4755-9729-f97423ec312d
+          stepCounter: 3e85a9eb-95e4-43c8-835a-0fcf332a66a4
+        config: {}
+        dataType: VARCHAR(2)
+        defaultValue: ""
+        description: ""
+        name: STATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 56327ed3-1155-4471-afc6-a740f43c4921
+          stepCounter: 3e85a9eb-95e4-43c8-835a-0fcf332a66a4
+        config: {}
+        dataType: NUMBER(5,2)
+        defaultValue: ""
+        description: ""
+        name: OBSERVATION
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SOURCE', 'SNOWTIME') }}
+  name: SNOWTIME
+  schema: ""
+  sqlType: Source
+  table: SNOWTIME
+  type: sourceInput
+  version: 1
+type: Node
