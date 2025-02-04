@@ -5,7 +5,7 @@ operation:
   config:
     redeploymentBehavior: Create At Existing Stream
     sourceType: Directory Table
-    stageName: STAGE_FOR_DIRECTORY_TABLE
+    stageName: STAGE_FOR_DIRECTORY_TABLE1
     storageLocation: SOURCE
   database: ""
   deployEnabled: true
