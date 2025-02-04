@@ -3,7 +3,7 @@ id: 20214898-37cd-4f7e-ac60-dc107af25c88
 name: STREAM_NODE_FOR_STAGE
 operation:
   config:
-    redeploymentBehavior: Create or Replace
+    redeploymentBehavior: Create If Not Exists
     sourceType: Directory Table
     stageName: STAGE_FOR_DIRECTORY_TABLE
     storageLocation: SOURCE
